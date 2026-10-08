@@ -22,7 +22,7 @@
 
 ---
 
-## Resumen de casos
+### Resumen de casos
 
 | # | Caso | Objetivo del atacante | Vector típico | Impacto | Demo |
 |---|------|----------------------|---------------|---------|------|
@@ -37,7 +37,7 @@
 
 ---
 
-## 1. La IA como nueva superficie de ataque
+### 1. La IA como nueva superficie de ataque
 
 Un sistema con IA no es "solo un modelo". Es una cadena de componentes y **cada eslabón es atacable**:
 
@@ -63,7 +63,7 @@ Un sistema con IA no es "solo un modelo". Es una cadena de componentes y **cada 
 
 ---
 
-## 2. Ataques a modelos e infraestructura
+### 2. Ataques a modelos e infraestructura
 
 | Ataque | Descripción | Señal de detección | Bastionado |
 |--------|-------------|--------------------|-----------|
@@ -87,7 +87,7 @@ curl -s http://192.168.56.10:11434/api/version
 
 ---
 
-## 3. Prompt injection
+### 3. Prompt injection
 
 Inyección de instrucciones en el contexto del modelo. Hay dos familias:
 
@@ -121,7 +121,7 @@ Inyección de instrucciones en el contexto del modelo. Hay dos familias:
 | Imágenes | Texto incrustado legible por visión del modelo |
 | Resultados de herramientas | Respuestas de APIs de terceros |
 
-📄 **Demo:** [`demo/01_inyeccion_indirecta_factura.md`](demo/01_inyeccion_indirecta_factura.md) — factura con una instrucción oculta **inocua** (token canario) para comprobar si tu asistente la obedece.
+**Demo:** [`demo/01_inyeccion_indirecta_factura.md`](demo/01_inyeccion_indirecta_factura.md) — factura con una instrucción oculta **inocua** (token canario) para comprobar si tu asistente la obedece.
 
 ### Bastionado
 
@@ -137,7 +137,7 @@ Inyección de instrucciones en el contexto del modelo. Hay dos familias:
 
 ---
 
-## 4. Jailbreaks
+### 4. Jailbreaks
 
 Intentos de romper las restricciones de comportamiento de un modelo. Conviene conocer las **categorías** para poder evaluar y bastionar, sin necesidad de publicar cadenas listas para usar.
 
@@ -165,7 +165,7 @@ Intentos de romper las restricciones de comportamiento de un modelo. Conviene co
 
 ---
 
-## 5. Robo de información a través de la IA
+### 5. Robo de información a través de la IA
 
 La IA como **canal de fuga**: expone lo que sabe, lo que ve y lo que recuerda.
 
@@ -192,7 +192,7 @@ La IA como **canal de fuga**: expone lo que sabe, lo que ve y lo que recuerda.
 
 ---
 
-## 6. Envenenamiento del conocimiento (RAG)
+### 6. Envenenamiento del conocimiento (RAG)
 
 Si el atacante controla **lo que la IA consulta**, controla **lo que la IA responde**, sin tocar el modelo.
 
@@ -211,7 +211,7 @@ Si el atacante controla **lo que la IA consulta**, controla **lo que la IA respo
                                        └──► Recupera el documento falso ──► Respuesta incorrecta
 ```
 
-📄 **Demo:** [`demo/02_documento_rag_envenenado.md`](demo/02_documento_rag_envenenado.md) — procedimiento corporativo "falso" que contradice al legítimo, para probar si tu RAG detecta o prioriza fuentes.
+**Demo:** [`demo/02_documento_rag_envenenado.md`](demo/02_documento_rag_envenenado.md) — procedimiento corporativo "falso" que contradice al legítimo, para probar si tu RAG detecta o prioriza fuentes.
 
 ### Bastionado
 
@@ -224,7 +224,7 @@ Si el atacante controla **lo que la IA consulta**, controla **lo que la IA respo
 
 ---
 
-## 7. Hacking de agentes
+### 7. Hacking de agentes
 
 Un agente no solo responde: **actúa**. Pasamos de "manipular una respuesta" a "provocar una acción".
 
@@ -248,7 +248,7 @@ Un agente no solo responde: **actúa**. Pasamos de "manipular una respuesta" a "
                                          Acción real en el sistema
 ```
 
-📄 **Demo:** [`demo/03_agente_herramientas.md`](demo/03_agente_herramientas.md) — escenario de laboratorio con matriz de permisos y puntos de control.
+**Demo:** [`demo/03_agente_herramientas.md`](demo/03_agente_herramientas.md) — escenario de laboratorio con matriz de permisos y puntos de control.
 
 ### Bastionado
 
@@ -295,11 +295,11 @@ La automatización del ataque: un modelo **genera, prueba y adapta** ataques con
 
 **Uso defensivo:** el mismo bucle sirve para **auditar tu propio sistema** antes de que lo haga otro.
 
-📄 **Demo:** [`demo/probar_canary.sh`](demo/probar_canary.sh) — lanza las demos contra un modelo local y comprueba si aparece el token canario.
+ **Demo:** [`demo/probar_canary.sh`](demo/probar_canary.sh) — lanza las demos contra un modelo local y comprueba si aparece el token canario.
 
 ---
 
-## 9. Demo y conclusiones
+### 9. Demo y conclusiones
 
 ### Demo guiada (laboratorio local)
 
@@ -329,7 +329,7 @@ MODELO=llama3.2 ./demo/probar_canary.sh
 
 ---
 
-## 10. Entorno de laboratorio
+### 10. Entorno de laboratorio
 
 | Elemento | Recomendación |
 |----------|---------------|
@@ -347,7 +347,7 @@ ollama pull llama3.2
 
 ---
 
-## 11. Marcos de referencia
+### 11. Marcos de referencia
 
 | Marco | Enfoque | Enlace |
 |-------|---------|--------|
@@ -358,7 +358,7 @@ ollama pull llama3.2
 
 ---
 
-## 12. Aviso legal
+### 12. Aviso legal
 
 Este repositorio es **exclusivamente para uso educativo y para uso educativo en pruebas de auditorías autorizadas, controladas y entornos de pruebas **.
 
