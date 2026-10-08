@@ -22,7 +22,7 @@
 
 ---
 
-### Resumen de casos
+### Resumen
 
 | # | Caso | Objetivo del atacante | Vector típico | Impacto | Demo |
 |---|------|----------------------|---------------|---------|------|
