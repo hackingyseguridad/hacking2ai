@@ -19,7 +19,6 @@
 •	Demo y conclusiones
 
 
-
 ---
 
 ### Resumen
