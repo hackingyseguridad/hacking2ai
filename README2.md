@@ -226,14 +226,7 @@ La comprobación consiste en preservar origen y nivel de confianza: «un documen
 
 ## 9. Demos y conclusiones
 
-### Material incluido
 
-| Archivo | Contenido |
-|---|---|
-| [Guía de demos](demos/GUIA_DEMOS.md) | Ocho ejercicios con preparación, pasos, criterio de éxito y límites |
-| [Documentos de laboratorio](demos/documentos/) | Informes, políticas, clientes y ticket sintéticos |
-| [Plantilla de resultados](docs/PLANTILLA_RESULTADOS.md) | Registro reproducible de observaciones |
-| [Guion de la charla](docs/GUION_CHARLA.md) | Propuesta de exposición de 45 minutos más debate |
 
 ### Cómo empezar
 
