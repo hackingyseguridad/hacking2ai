@@ -360,7 +360,7 @@ ollama pull llama3.2
 
 ## 12. Aviso legal
 
-Este material es **exclusivamente educativo y para auditorías autorizadas**.
+Este repositorio es **exclusivamente para uso educativo y para uso educativo en pruebas de auditorías autorizadas, controladas y entornos de pruebas **.
 
 | Norma | Relevancia |
 |-------|-----------|
