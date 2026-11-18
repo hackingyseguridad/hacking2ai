@@ -1,3 +1,9 @@
+<img align="left" alt="hackingyseguridad.com" src="https://github.com/hackingyseguridad/hacking2ai/blob/main/banner.png" style="margin-bottom: 20px;">
+
+<br clear="left"/>
+
+---
+
 ### Hacking a la [IA] y entre ellas: IA contra IA
 
 •	La IA como nueva superficie de ataque. modelos, aplicaciones, datos, agentes, herramientas e integraciones.
