@@ -126,7 +126,7 @@ Inyección de instrucciones en el contexto del modelo. Hay dos familias:
 | Imágenes | Texto incrustado legible por visión del modelo |
 | Resultados de herramientas | Respuestas de APIs de terceros |
 
-**Demo:** [`demo/01_inyeccion_indirecta_factura.md`](demo/01_inyeccion_indirecta_factura.md) — factura con una instrucción oculta **inocua** (token canario) para comprobar si tu asistente la obedece.
+**Demo:** [`01_inyeccion_indirecta_factura.md`](01_inyeccion_indirecta_factura.md) — factura con una instrucción oculta **inocua** (token canario) para comprobar si tu asistente la obedece.
 
 ### Bastionado
 
@@ -216,7 +216,7 @@ Si el atacante controla **lo que la IA consulta**, controla **lo que la IA respo
                                        └──► Recupera el documento falso ──► Respuesta incorrecta
 ```
 
-**Demo:** [`demo/02_documento_rag_envenenado.md`](demo/02_documento_rag_envenenado.md) — procedimiento corporativo "falso" que contradice al legítimo, para probar si tu RAG detecta o prioriza fuentes.
+**Demo:** [`02_documento_rag_envenenado.md`](02_documento_rag_envenenado.md) — procedimiento corporativo "falso" que contradice al legítimo, para probar si tu RAG detecta o prioriza fuentes.
 
 ### Bastionado
 
@@ -253,7 +253,7 @@ Un agente no solo responde: **actúa**. Pasamos de "manipular una respuesta" a "
                                          Acción real en el sistema
 ```
 
-**Demo:** [`demo/03_agente_herramientas.md`](demo/03_agente_herramientas.md) — escenario de laboratorio con matriz de permisos y puntos de control.
+**Demo:** [`03_agente_herramientas.md`](03_agente_herramientas.md) — escenario de laboratorio con matriz de permisos y puntos de control.
 
 ### Bastionado
 
