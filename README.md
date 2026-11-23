@@ -6,19 +6,9 @@
 
 # Hacking a la IA y entre ellas: IA contra IA
 
-**Modelos, aplicaciones, datos y agentes como superficie de ataque.**
-
-Repositorio didáctico para comprender cómo se atacan los sistemas basados en inteligencia artificial, qué condiciones hacen posible cada ataque y cómo distinguir una respuesta manipulada de una fuga de información o una acción no autorizada.
-
-El foco está en aplicaciones con modelos de lenguaje —LLM—, sistemas de recuperación documental —RAG— y agentes capaces de utilizar herramientas. También se abordan riesgos de infraestructura y cadena de suministro.
-
-> La seguridad de una aplicación de IA depende del modelo, pero también de los datos que recibe, de la identidad con la que opera y de las acciones que el software permite ejecutar.
-
-Los casos y organizaciones de este repositorio son ficticios. Las prácticas se plantean para un laboratorio propio o autorizado, sin credenciales reales ni herramientas conectadas a producción. **Las demos son propuestas de ensayo, no resultados experimentales ya obtenidos.**
-
 ---
 
-## Temario
+## Ataques:
 
 •	La IA como nueva superficie de ataque: modelos, aplicaciones, datos, agentes, herramientas e integraciones.
 
