@@ -8,8 +8,6 @@
 
 ---
 
-## Ataques:
-
 •	La IA como nueva superficie de ataque: modelos, aplicaciones, datos, agentes, herramientas e integraciones.
 
 •	Ataques a modelos e infraestructura: extracción de modelos, APIs expuestas, dependencias comprometidas y consumo abusivo de recursos.
