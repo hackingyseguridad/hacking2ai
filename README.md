@@ -22,8 +22,6 @@
 
 •	IA contra IA: automatización del ataque. Modelos que generan y adaptan ataques contra otros modelos; agentes que intentan engañar a otros agentes.
 
-•	Demo y conclusiones.
-
 ---
 
 ## Índice
