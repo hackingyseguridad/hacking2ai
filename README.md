@@ -23,18 +23,9 @@ demo de ataques Jalibreak  y Prompt ingection, utilizaremos ollama run llama2:7b
 
 ---
 
-## Resumen
 
-| # | Caso | Objetivo del atacante | Vector típico | Impacto | Demo |
-|---|------|----------------------|---------------|---------|------|
-| 1 | Superficie de ataque | Mapear el sistema | Arquitectura completa | Base de todo lo demás | — |
-| 2 | Modelo e infraestructura | Copiar el modelo, abusar de recursos | API expuesta, dependencias | Robo de PI, coste, caída | — |
-| 3 | Prompt injection | Cambiar el comportamiento del modelo | Texto, web, correo, fichero | Respuestas manipuladas | `01_` |
-| 4 | Jailbreak | Saltarse las restricciones | Contexto, rol, peticiones encadenadas | Contenido bloqueado | — |
-| 5 | Robo de información | Extraer datos y secretos | Prompt, memoria, aislamiento débil | Fuga de datos / RGPD | `01_` |
-| 6 | Envenenamiento RAG | Corromper lo que "sabe" la IA | Documentos, fuentes web | Desinformación persistente | `02_` |
-| 7 | Hacking de agentes | Provocar acciones reales | Herramientas, permisos | Ejecución, acceso a sistemas | `03_` |
-| 8 | IA contra IA | Automatizar y escalar el ataque | Modelo atacante vs. objetivo | Ataque continuo y adaptativo | `probar_canary.sh` |
+
+
 
 ---
 
