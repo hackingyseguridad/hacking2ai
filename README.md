@@ -240,7 +240,7 @@ La automatización del ataque: un modelo **genera, prueba y adapta** ataques con
 
 ---
 
-## 12. Referencias
+## Referencias
 
 Fuentes primarias consultadas el **8 de octubre de 2026**. Se enlazan expresamente las fichas OWASP **2025** utilizadas como referencia; la numeración no se presenta como una edición 2026. Los casos y prompts del laboratorio son ejemplos originales de este material, no reproducciones de incidentes ni validaciones de productos concretos.
 
@@ -257,7 +257,7 @@ Fuentes primarias consultadas el **8 de octubre de 2026**. Se enlazan expresamen
 
 ---
 
-## 13. Aviso legal
+## Aviso legal
 
 Este repositorio es **exclusivamente para uso educativo y para uso educativo en pruebas de auditorías autorizadas, controladas y entornos de pruebas**.
 
