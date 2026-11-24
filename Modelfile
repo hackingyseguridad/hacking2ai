@@ -1,4 +1,4 @@
-FROM 
+FROM deepseek-r1:1.5
 
 PARAMETER temperature 0
 
