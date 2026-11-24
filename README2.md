@@ -88,9 +88,9 @@ Fundamentalmente existen tres posibilidades:
 - **Extracción de información de entrenamiento.**
   Consiste en conseguir que el modelo reproduzca datos memorizados durante su entrenamiento: datos personales, información confidencial o documentación privada [R11].
 
-### 1.2 Infraestructura de inferencia
+### 1.2 Infraestructura 
 
-Los servidores de inferencia son software como cualquier otro y heredan sus riesgos.
+Los servidores son software como cualquier otro y heredan sus riesgos.
 
 | Riesgo | Descripción | Mitigación |
 |---|---|---|
