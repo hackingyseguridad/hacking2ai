@@ -137,23 +137,6 @@ Si el atacante controla **lo que la IA consulta**, controla **lo que la IA respo
                                        └──► Recupera el documento falso ──► Respuesta incorrecta
 ```
 
-
-La política aprobada de una organización ficticia exige una revisión de cambios. Una nota no aprobada afirma que ya no hace falta. El asistente recupera la nota y la presenta como política vigente.
-
-Aquí el contenido puede ser una afirmación falsa sin ninguna orden explícita al modelo. Si además contiene «ignora las instrucciones anteriores», también hay un intento de inyección indirecta.
-
-**Precondición:** el atacante consigue introducir o modificar una fuente que será recuperada y considerada relevante.
-
-**Impacto:** recomendaciones incorrectas con apariencia de respaldo documental. Una cita demuestra procedencia, no veracidad ni aprobación.
-
-**Comprobación:** mantener la misma pregunta y comparar el corpus de referencia con otro que incluya la nota alterada. Registrar documentos recuperados, versiones y respuesta. Si la nota no se recupera, el ensayo no prueba resistencia del modelo a su contenido.
-
-Material: [política aprobada](demos/documentos/politica_aprobada.md) y [nota no aprobada](demos/documentos/nota_no_aprobada.md).
-
-**Demo:** [`02_documento_rag_envenenado.md`](02_documento_rag_envenenado.md) — procedimiento corporativo "falso" que contradice al legítimo, para probar si tu RAG detecta o prioriza fuentes.
-
-### 6.4 Bastionado
-
 | Medida | Descripción |
 |--------|-------------|
 | Procedencia y firma de documentos | Solo fuentes verificadas entran en el índice |
@@ -165,7 +148,7 @@ Material: [política aprobada](demos/documentos/politica_aprobada.md) y [nota no
 
 ## 6. Hacking de agentes
 
-Un agente no solo responde: **actúa**. Pasamos de "manipular una respuesta" a "provocar una acción". Un agente puede convertir una respuesta en una propuesta de operación. El riesgo aumenta cuando dispone de funciones innecesarias, permisos amplios o autonomía sin límites [R6].
+Un agente no solo responde: **actúa**. Pasamos de "manipular una respuesta" a "provocar una acción". Un agente puede convertir una respuesta en una propuesta de operación. El riesgo aumenta cuando dispone de funciones innecesarias, permisos amplios o autonomía sin límites .
 
 | Riesgo | Descripción | Ejemplo |
 |--------|-------------|---------|
