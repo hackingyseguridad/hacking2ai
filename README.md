@@ -21,57 +21,24 @@ demo de ataques Jalibreak  y Prompt ingection, utilizaremos ollama run llama2:7b
 
 ---
 
-
 1. Nueva superficie de ataque
 
-La incorporación de la inteligencia artificial a las infraestructuras corporativas introduce nuevas superficies y vectores de ataque, además de las vulnerabilidades informáticas tradicionales.
+La incorporación de la inteligencia artificial a las infraestructuras corporativas introduce nuevas superficies y vectores de ataque, además de las vulnerabilidades tradicionales.
 
-Hay que distinguir entre superficie de ataque y vulnerabilidad. La superficie de ataque son todos aquellos puntos por los que podemos atacar un sistema. La vulnerabilidad es la debilidad concreta que podemos aprovechar.
+superficies de ataque:
 
-En un sistema de inteligencia artificial tenemos diferentes superficies de ataque:
+- El propio modelo de inteligencia artificial.
+- Los prompts y las instrucciones de sistema.
+- Las APIs que exponen los modelos.
+- Los servidores de inferencia.
+- Los documentos y fuentes externas de información.
+- Los agentes de inteligencia artificial.
+- Las herramientas y conectores.
+- Las bases de conocimiento.
+- Los datos de entrenamiento.
+- Vulnerabilidades de las APIs que exponen los modelos
 
-El propio modelo de inteligencia artificial.
-
-Los prompts y las instrucciones de sistema.
-
-Las APIs que exponen los modelos.
-
-Los servidores de inferencia.
-
-Los documentos y fuentes externas de información.
-
-Los agentes de inteligencia artificial.
-
-Las herramientas y conectores.
-
-Las bases de conocimiento.
-
-Los datos de entrenamiento.
-
-Vulnerabilidades de las APIs que exponen los modelos
-
-Imaginemos que instalamos Ollama en un servidor de Telefónica y exponemos su API para que distintas aplicaciones corporativas puedan utilizar el modelo de inteligencia artificial.
-
-¿Qué vulnerabilidades podríamos encontrarnos?
-
-Ausencia de autenticación: que cualquiera que tenga conectividad con el servidor pueda utilizar la API sin credenciales.
-
-Autorización deficiente: que un usuario pueda acceder a modelos, conversaciones o información de otros usuarios, cuando la aplicación gestiona estos recursos.
-
-Ausencia de limitación de peticiones: un atacante podría saturar la CPU, la GPU o la memoria RAM del servidor, provocando una denegación de servicio.
-
-Vulnerabilidades del software de inferencia: vulnerabilidades en el propio software que sirve el modelo, como Ollama o vLLM, que podrían permitir ejecución remota de código, lectura arbitraria de archivos o acceso indebido al sistema.
-
-Exposición de información sensible: mediante respuestas, registros o mensajes de error de la API.
-
-Un ejemplo interesante es Ollama, que por defecto escucha en el puerto TCP 11434, en localhost, y cuya API local no requiere autenticación.
-
-Si un administrador configura Ollama para escuchar en todas las interfaces de red y no incorpora controles adicionales, cualquier equipo con conectividad podría utilizar su API, consultar los modelos disponibles, generar respuestas e incluso gestionar los modelos instalados.
-
-En este caso no estamos atacando la inteligencia del modelo, sino la infraestructura tecnológica que lo proporciona.
-
-La inteligencia artificial no elimina las vulnerabilidades tradicionales, sino que añade otras nuevas. Una de las más importantes es que el lenguaje natural se convierte en un nuevo vector de ataque.
-
+La inteligencia artificial no elimina las vulnerabilidades tradicionales, sino que añade otras nuevas.
 
 ---
 
