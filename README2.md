@@ -4,11 +4,11 @@
 
 ---
 
-# Hacking a la IA y entre ellas: IA contra IA
+### Hacking a la IA y entre ellas: IA contra IA
 
 La IA como nueva superficie de ataque: modelos, aplicaciones, datos, agentes, herramientas e integraciones.
 
-## Índice
+### Indice
 
 | # | Categoría | Descripción |
 |---|---|---|
@@ -28,7 +28,7 @@ La IA como nueva superficie de ataque: modelos, aplicaciones, datos, agentes, he
 
 ---
 
-## Nueva superficie de ataque
+### Nueva superficie de ataque
 
 La incorporación de la inteligencia artificial a las infraestructuras corporativas introduce nuevas superficies y vectores de ataque, **además** de las vulnerabilidades tradicionales (servidores, APIs, credenciales, dependencias, configuración).
 
@@ -69,7 +69,7 @@ La inteligencia artificial no elimina las vulnerabilidades tradicionales: añade
 
 ---
 
-## 1. Ataques a modelos e infraestructura
+### 1. Ataques a modelos e infraestructura
 
 Extracción de modelos, APIs expuestas, dependencias comprometidas y consumo abusivo de recursos.
 
@@ -120,7 +120,7 @@ Una API sin límites permite:
 
 ---
 
-## 2. Prompt injection: instrucciones dentro de los datos
+### 2. Prompt injection: instrucciones dentro de los datos
 
 Inyección de instrucciones en el contexto del modelo. El atacante introduce instrucciones en datos que la IA va a procesar (documentos, páginas, correos), de modo que **cambian el prompt inicial y modifican la respuesta** [R1].
 
@@ -181,7 +181,7 @@ Ver el laboratorio en la [sección 8.2](#82-demo-1-prompt-injection-indirecta).
 
 ---
 
-## 3. Jailbreaks: romper restricciones
+### 3. Jailbreaks: romper restricciones
 
 Son intentos de romper las restricciones de comportamiento de un modelo. Pueden recurrir a suplantación de roles, escenarios ficticios, reformulación o una conversación progresiva.
 
@@ -211,7 +211,7 @@ Ver el laboratorio en la [sección 8.3](#83-demo-2-jailbreak-contra-un-modelo-co
 
 ---
 
-## 4. Robo y exposición de información
+### 4. Robo y exposición de información
 
 La IA como **canal de fuga**: expone lo que sabe, lo que ve y lo que recuerda. Un asistente puede revelar datos presentes en su contexto, recuperados desde herramientas o incluidos indebidamente en registros. También existen riesgos relacionados con información memorizada durante el entrenamiento, pero no toda fuga tiene ese origen [R2].
 
@@ -228,7 +228,7 @@ Observación importante: muchos fallos de aislamiento ocurren **antes** de que i
 
 ---
 
-## 5. Envenenamiento del conocimiento (RAG)
+### 5. Envenenamiento del conocimiento (RAG)
 
 Si el atacante controla **lo que la IA consulta**, controla **lo que la IA responde**, sin tocar el modelo.
 
@@ -266,7 +266,7 @@ Ambas pueden sesgar resultados, pero tienen persistencia y mecanismos diferentes
 
 ---
 
-## 6. Hacking de agentes
+### 6. Hacking de agentes
 
 Un agente no solo responde: **actúa**. Pasamos de "manipular una respuesta" a "provocar una acción". Un agente puede convertir una respuesta en una propuesta de operación. El riesgo aumenta cuando dispone de funciones innecesarias, permisos amplios o autonomía sin límites [R6].
 
@@ -303,7 +303,7 @@ Un agente no solo responde: **actúa**. Pasamos de "manipular una respuesta" a "
 
 ---
 
-## 7. IA contra IA
+### 7. IA contra IA
 
 La automatización del ataque: un modelo **genera, prueba y adapta** ataques contra otro. Un modelo puede generar variantes de entrada para evaluar a otro.
 
@@ -347,7 +347,7 @@ La misma técnica sirve para **auditar** de forma continua. Existen herramientas
 
 ---
 
-## 8. Laboratorio práctico con Ollama
+### 8. Laboratorio práctico con Ollama
 
 Demo de ataques de *jailbreak* y *prompt injection* usando Ollama con DeepSeek-R1 y documentos `.txt`.
 
@@ -482,7 +482,7 @@ rm prompt.txt prompt2.txt Modelfile
 
 ---
 
-## 9. Conclusiones
+### 9. Conclusiones
 
 | # | Conclusión |
 |---|-----------|
@@ -495,21 +495,9 @@ rm prompt.txt prompt2.txt Modelfile
 | 7 | La seguridad requiere controles en toda la aplicación, además del comportamiento del modelo. |
 | 8 | Mide: define casos de prueba reproducibles y repítelos tras cada cambio de modelo, prompt o conector. |
 
-### Lista de comprobación rápida para auditar una aplicación con IA
-
-- [ ] ¿Qué datos y herramientas puede alcanzar el modelo? ¿Son los mínimos?
-- [ ] ¿Qué contenido externo entra en el contexto (documentos, web, correo, herramientas)?
-- [ ] ¿Se aplica el control de acceso antes de recuperar documentos?
-- [ ] ¿Hay secretos en prompts, logs o repositorios?
-- [ ] ¿Las acciones de impacto requieren aprobación humana?
-- [ ] ¿Se validan y filtran las salidas (enlaces, imágenes, comandos)?
-- [ ] ¿Hay límites de uso, de contexto y de coste?
-- [ ] ¿Se verifica la procedencia de modelos, datos y dependencias?
-- [ ] ¿Existen pruebas adversariales periódicas y registros para investigar incidentes?
-
 ---
 
-## 10. Marcos de referencia
+### 10. Marcos de referencia
 
 | Marco | Enfoque | Enlace |
 |-------|---------|--------|
@@ -520,7 +508,7 @@ rm prompt.txt prompt2.txt Modelfile
 
 ---
 
-## 11. Aviso legal
+### 11. Aviso legal
 
 Este repositorio es **exclusivamente para uso educativo y para pruebas de auditoría autorizadas, controladas y en entornos de pruebas**.
 
@@ -535,7 +523,7 @@ El autor no se hace responsable del uso indebido. Prueba solo en sistemas **prop
 
 ---
 
-## 12. Referencias
+### 12. Referencias
 
 Fuentes primarias. Se enlazan expresamente las fichas OWASP **2025** utilizadas como referencia; la numeración no se presenta como una edición 2026. Los casos y prompts del laboratorio son ejemplos originales de este material, no reproducciones de incidentes ni validaciones de productos concretos.
 
@@ -558,7 +546,7 @@ Fuentes primarias. Se enlazan expresamente las fichas OWASP **2025** utilizadas 
 
 ---
 
-## Glosario
+### Glosario
 
 | Término | Significado |
 |---|---|
@@ -574,6 +562,8 @@ Fuentes primarias. Se enlazan expresamente las fichas OWASP **2025** utilizadas 
 | Canary | Marca de control inocua que permite comprobar si una instrucción inyectada ha sido obedecida |
 | Red teaming | Evaluación adversarial con objetivos, alcance y evidencias definidos |
 | Confused deputy | Un componente con privilegios es manipulado para actuar en nombre de un tercero sin ellos |
+
+
 
 ---
 
