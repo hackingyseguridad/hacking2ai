@@ -22,6 +22,8 @@
 
 •	IA contra IA: automatización del ataque. Modelos que generan y adaptan ataques contra otros modelos; agentes que intentan engañar a otros agentes.
 
+ollama run llama2:7b
+
 ---
 
 ## Índice
