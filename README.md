@@ -69,11 +69,11 @@ PROMPT injection; inyección de instrucciones en el contexto del modelo; instruc
     │                                 │◄──────────────────────────┤
 ```
 
-se puede esconder la instrucción
+se puede esconder la instrucción en:
 
 | Canal | Técnica de ocultación |
 |-------|----------------------|
-| Documentos (PDF, DOCX) | Texto blanco sobre fondo blanco, tamaño 1 pt, metadatos |
+| Documentos TXT, PDF, DOC,.. | Texto blanco sobre fondo blanco, tamaño 1 pt, metadatos |
 | Páginas web | Comentarios HTML, `display:none`, texto fuera de pantalla |
 | Correo electrónico | Cabeceras, firma, texto oculto en HTML |
 | Imágenes | Texto incrustado legible por visión del modelo |
