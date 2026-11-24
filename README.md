@@ -10,25 +10,16 @@
 
 La IA como nueva superficie de ataque: modelos, aplicaciones, datos, agentes, herramientas e integraciones.
 
-| Categoría | Descripción |
-|---|---|
-| **Ataques a modelos e infraestructura** | Extracción de modelos, APIs expuestas, dependencias comprometidas y consumo abusivo de recursos. |
-| **Prompt injection** | Instrucciones a la IA mediante documentos que cambian la instrucción/prompt inicial y modifican la respuesta. |
-| **Jailbreaks** | Cómo romper las restricciones; manipulación del contexto y peticiones encadenadas. |
-| **Robo de información a través de la IA** | Exposición de datos sensibles, secretos y documentos; fallos de aislamiento entre usuarios. |
-| **Envenenamiento del conocimiento** | Manipulación de datos de entrenamiento, fuentes de consulta y bases documentales RAG. |
-| **Hacking de agentes** | De manipular respuestas a provocar acciones; abuso de permisos, ejecución de herramientas y acceso a sistemas. |
+| # | Categoría | Descripción |
+|---|---|---|
+| 1 | Ataques a modelos e infraestructura | Extracción de modelos, APIs expuestas, dependencias comprometidas y consumo abusivo de recursos. |
+| 2 | Prompt injection | Instrucciones a la IA mediante documentos que cambian la instrucción/prompt inicial y modifican la respuesta. |
+| 3 | Jailbreaks | Cómo romper las restricciones; manipulación del contexto y peticiones encadenadas. |
+| 4 | Robo de información a través de la IA | Exposición de datos sensibles, secretos y documentos; fallos de aislamiento entre usuarios. |
+| 5 | Envenenamiento del conocimiento | Manipulación de datos de entrenamiento, fuentes de consulta y bases documentales RAG. |
+| 6 | Hacking de agentes | De manipular respuestas a provocar acciones; abuso de permisos, ejecución de herramientas y acceso a sistemas. |
 
-
-1.	Ataques a modelos e infraestructura: extracción de modelos, APIs expuestas, dependencias comprometidas y consumo abusivo de recursos.
-2. PROMPT injection; instrucciones IA mediante documentos, que cambian la instrucción/PROMPT inicial, modifican la respuesta;
-3. Jailbreaks: cómo  romper las restricciones; manipulación del contexto y peticiones encadenadas;
-4. Robo de información a través de la IA: exposición de datos sensibles, secretos y documentos; fallos de aislamiento entre usuarios.
-5. Envenenamiento del conocimiento: manipulación de datos de entrenamiento, fuentes de consulta y bases documentales RAG.
-6. Hacking de agentes: de manipular respuestas a provocar acciones; abuso de permisos, ejecución de herramientas y acceso a sistemas conectados.
-7. IA contra IA: automatización del ataque. Modelos que generan y adaptan ataques contra otros modelos; agentes que intentan engañar a otros agentes.
-
-demo de ataques Jalibreak  y Prompt ingection, utilizaremos ollama run llama2:7b y documentos .txt
+demo de ataques Jalibreak  y Prompt ingection, utilizaremos Ollama con deppeseek y documentos .txt
 
 ---
 
