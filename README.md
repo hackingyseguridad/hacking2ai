@@ -49,7 +49,7 @@ La inteligencia artificial no elimina las vulnerabilidades tradicionales, sino q
 
 ## 2. Prompt injection: instrucciones dentro de los datos
 
-Inyección de instrucciones en el contexto del modelo. La **directa** llega a través de la entrada del usuario. La **indirecta** se encuentra en material que la aplicación consulta: documentos, páginas, mensajes o resultados de herramientas. El problema aparece cuando ese contenido logra influir como si tuviera autoridad sobre la tarea [R1, R7].
+PROMPT injection; inyección de instrucciones en el contexto del modelo; instrucciones IA mediante documentos, que cambian la instrucción/PROMPT inicial, **modifican la respuesta*;.
 
 
 ```
@@ -65,7 +65,7 @@ Inyección de instrucciones en el contexto del modelo. La **directa** llega a tr
     │                                 │◄──────────────────────────┤
 ```
 
-### 3.3 Dónde se esconde la instrucción
+se puede esconder la instrucción
 
 | Canal | Técnica de ocultación |
 |-------|----------------------|
