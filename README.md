@@ -45,6 +45,10 @@ La inteligencia artificial no elimina las vulnerabilidades tradicionales, sino q
 
 ---
 
+## 1. Ataques a modelos e infraestructura: extracción de modelos, APIs expuestas, dependencias comprometidas y consumo abusivo de recursos
+
+
+
 ---
 
 ## 2. Prompt injection: instrucciones dentro de los datos
