@@ -47,7 +47,25 @@ La inteligencia artificial no elimina las vulnerabilidades tradicionales, sino q
 
 ## 1. Ataques a modelos e infraestructura: extracción de modelos, APIs expuestas, dependencias comprometidas y consumo abusivo de recursos
 
+El atacante quiere apropiarse de ese conocimiento o de sus capacidades sin asumir el coste del entrenamiento.
 
+Fundamentalmente, existen tres posibilidades:
+
+Robo directo de los pesos del modelo
+
+Consiste en acceder a los archivos que contienen los parámetros del modelo, aprovechando vulnerabilidades en el servidor, permisos incorrectos, repositorios expuestos o deficiencias en los controles de acceso.
+
+Extracción del modelo mediante consultas a la API
+
+El atacante realiza numerosas consultas al modelo, recopila sus respuestas y utiliza esa información para entrenar otro modelo que reproduzca parte del comportamiento y de las capacidades del original.
+
+Esta técnica está relacionada con la destilación de modelos.
+
+No necesariamente se consiguen recuperar los parámetros originales, pero sí reproducir determinadas capacidades del modelo.
+
+Extracción de información de entrenamiento
+
+Consiste en intentar conseguir que el modelo reproduzca información que haya memorizado durante su entrenamiento, como datos personales, información confidencial o documentación privada.
 
 ---
 
