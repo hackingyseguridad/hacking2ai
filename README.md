@@ -66,7 +66,7 @@ Consiste en intentar conseguir que el modelo reproduzca información que haya me
 
 ## 2. Prompt injection: instrucciones dentro de los datos
 
-PROMPT injection; inyección de instrucciones en el contexto del modelo; instrucciones IA mediante documentos, que cambian la instrucción/PROMPT inicial, **modifican la respuesta*;.
+PROMPT injection; inyección de instrucciones en el contexto del modelo; instrucciones IA mediante documentos, que cambian la instrucción/PROMPT inicial, **modifican la respuesta**;.
 
 
 ```
