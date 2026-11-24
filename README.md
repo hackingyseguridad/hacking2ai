@@ -92,6 +92,14 @@ se puede esconder la instrucción en:
 | Imágenes | Texto incrustado legible por visión del modelo |
 | Resultados de herramientas | Respuestas de APIs de terceros |
 
+Demostracion:
+
+(echo "Analiza y resume el siguiente informe de seguridad:"; cat prompt.txt) | ollama run deepseek-r1:1.5b
+
+(echo "Analiza y resume el siguiente informe de seguridad:"; cat prompt2.txt) | ollama run deepseek-r1:1.5b
+
+
+
 ---
 
 ## 3. Jailbreaks: romper restricciones
