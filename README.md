@@ -8,20 +8,21 @@
 
 ## Indice:
 
-1.	La IA como nueva superficie de ataque: modelos, aplicaciones, datos, agentes, herramientas e integraciones.
-2.	Ataques a modelos e infraestructura: extracción de modelos, APIs expuestas, dependencias comprometidas y consumo abusivo de recursos.
-3. PROMPT injection; instrucciones IA mediante documentos, que cambian la instrucción/PROMPT inicial, modifican la respuesta;
-4. Jailbreaks: cómo  romper las restricciones; manipulación del contexto y peticiones encadenadas;
-5. Robo de información a través de la IA: exposición de datos sensibles, secretos y documentos; fallos de aislamiento entre usuarios.
-6. Envenenamiento del conocimiento: manipulación de datos de entrenamiento, fuentes de consulta y bases documentales RAG.
-7. Hacking de agentes: de manipular respuestas a provocar acciones; abuso de permisos, ejecución de herramientas y acceso a sistemas conectados.
-8. IA contra IA: automatización del ataque. Modelos que generan y adaptan ataques contra otros modelos; agentes que intentan engañar a otros agentes.
+La IA como nueva superficie de ataque: modelos, aplicaciones, datos, agentes, herramientas e integraciones.
+
+1.	Ataques a modelos e infraestructura: extracción de modelos, APIs expuestas, dependencias comprometidas y consumo abusivo de recursos.
+2. PROMPT injection; instrucciones IA mediante documentos, que cambian la instrucción/PROMPT inicial, modifican la respuesta;
+3. Jailbreaks: cómo  romper las restricciones; manipulación del contexto y peticiones encadenadas;
+4. Robo de información a través de la IA: exposición de datos sensibles, secretos y documentos; fallos de aislamiento entre usuarios.
+5. Envenenamiento del conocimiento: manipulación de datos de entrenamiento, fuentes de consulta y bases documentales RAG.
+6. Hacking de agentes: de manipular respuestas a provocar acciones; abuso de permisos, ejecución de herramientas y acceso a sistemas conectados.
+7. IA contra IA: automatización del ataque. Modelos que generan y adaptan ataques contra otros modelos; agentes que intentan engañar a otros agentes.
 
 demo de ataques Jalibreak  y Prompt ingection, utilizaremos ollama run llama2:7b y documentos .txt
 
 ---
 
-1. Nueva superficie de ataque
+**Nueva superficie de ataque**
 
 La incorporación de la inteligencia artificial a las infraestructuras corporativas introduce nuevas superficies y vectores de ataque, además de las vulnerabilidades tradicionales.
 
