@@ -347,11 +347,9 @@ La misma técnica sirve para **auditar** de forma continua. Existen herramientas
 
 ---
 
-### 8. Laboratorio práctico con Ollama
+### 8. Laboratorio con Ollama
 
 Demo de ataques de *jailbreak* y *prompt injection* usando Ollama con DeepSeek-R1 y documentos `.txt`.
-
-> Ejecutar **solo en un entorno propio y aislado**. Los ejemplos son inocuos y de uso didáctico.
 
 ### 8.1 Requisitos
 
