@@ -10,33 +10,16 @@
 
 1.	La IA como nueva superficie de ataque: modelos, aplicaciones, datos, agentes, herramientas e integraciones.
 2.	Ataques a modelos e infraestructura: extracción de modelos, APIs expuestas, dependencias comprometidas y consumo abusivo de recursos.
-3. PROMPT injection; instrucciones IA mediante documentos, que cambian la instrucción/PROMPT inicial, modifican la respuesta. + Demo;
-4. Jailbreaks: cómo  romper las restricciones; manipulación del contexto y peticiones encadenadas. + Demo;
+3. PROMPT injection; instrucciones IA mediante documentos, que cambian la instrucción/PROMPT inicial, modifican la respuesta;
+4. Jailbreaks: cómo  romper las restricciones; manipulación del contexto y peticiones encadenadas;
 5. Robo de información a través de la IA: exposición de datos sensibles, secretos y documentos; fallos de aislamiento entre usuarios.
 6. Envenenamiento del conocimiento: manipulación de datos de entrenamiento, fuentes de consulta y bases documentales RAG.
 7. Hacking de agentes: de manipular respuestas a provocar acciones; abuso de permisos, ejecución de herramientas y acceso a sistemas conectados.
 8. IA contra IA: automatización del ataque. Modelos que generan y adaptan ataques contra otros modelos; agentes que intentan engañar a otros agentes.
 
-para las demo utilizaremos ollama run llama2:7b
+demo de ataques Jalibreak  y Prompt ingection, utilizaremos ollama run llama2:7b y documentos .txt
 
 ---
-
-## Índice
-
-1. [La IA como nueva superficie de ataque](#1-la-ia-como-nueva-superficie-de-ataque)
-2. [Ataques a modelos e infraestructura](#2-ataques-a-modelos-e-infraestructura)
-3. [Prompt injection: instrucciones dentro de los datos](#3-prompt-injection-instrucciones-dentro-de-los-datos)
-4. [Jailbreaks: intentos de romper restricciones](#4-jailbreaks-intentos-de-romper-restricciones)
-5. [Robo y exposición de información](#5-robo-y-exposición-de-información)
-6. [Envenenamiento del conocimiento (RAG)](#6-envenenamiento-del-conocimiento-rag)
-7. [Hacking de agentes](#7-hacking-de-agentes)
-8. [IA contra IA](#8-ia-contra-ia)
-9. [Demos y conclusiones](#9-demos-y-conclusiones)
-10. [Entorno de laboratorio](#10-entorno-de-laboratorio)
-11. [Marcos de referencia](#11-marcos-de-referencia)
-12. [Referencias](#12-referencias)
-13. [Aviso legal](#13-aviso-legal)
-14. [Glosario](#glosario)
 
 ---
 
