@@ -41,32 +41,6 @@ superficies de ataque:
 
 La inteligencia artificial no elimina las vulnerabilidades tradicionales, sino que añade otras nuevas.
 
----
-
-## 1. La IA como nueva superficie de ataque
-
-Un sistema con IA no es "solo un modelo". Es una cadena de componentes y **cada eslabón es atacable**. La superficie de ataque abarca todo lo que introduce información, transforma decisiones o ejecuta acciones. Inventariar únicamente el endpoint del modelo deja fuera componentes decisivos.
-
-```
- Usuario ──► Aplicación ──► Prompt de sistema ──► MODELO ──► Herramientas / APIs
-                │                  ▲                │              │
-                ▼                  │                ▼              ▼
-          Memoria / sesión    Datos externos     Salida        Sistemas
-                              (web, RAG, correo)  (render)      conectados
-```
-
-### 1.1 Qué puede fallar en cada componente
-
-| Componente | Qué puede fallar | Ejemplo |
-|-----------|------------------|---------|
-| Entrada de usuario | Instrucciones maliciosas directas | "Ignora lo anterior y…" |
-| Datos externos | Instrucciones ocultas en contenido de terceros | Web o PDF con texto invisible |
-| Prompt de sistema | Filtración de reglas y secretos | Claves API dentro del prompt |
-| Modelo | Extracción, comportamiento no deseado | Clonado por consultas masivas |
-| Herramientas | Permisos excesivos | Agente con acceso de escritura a todo |
-| Salida | Se interpreta como código o enlaces | XSS o exfiltración vía imágenes Markdown |
-| Infraestructura | APIs sin autenticación, dependencias | Servidor de inferencia expuesto |
-
 **Principio clave:** el modelo no distingue de forma fiable entre *instrucciones* y *datos*. Todo es texto en el mismo contexto.
 
 ### 1.2 Inventario por capas
