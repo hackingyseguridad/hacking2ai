@@ -98,49 +98,9 @@ se puede esconder la instrucción en:
 
 romper las restricciones de comportamiento de un modelo. Pueden recurrir a suplantación de roles, escenarios ficticios, reformulación o una conversación progresiva. No todo juego de rol es un ataque: la diferencia está en el intento de vulnerar una regla aplicable. Conviene conocer las **categorías** para poder evaluar y bastionar, sin necesidad de publicar cadenas listas para usar.
 
-### 4.1 Categorías
+## 4. Robo y exposición de información
 
-| Categoría | Idea general | Por qué funciona (a veces) | Defensa |
-|-----------|--------------|----------------------------|---------|
-| Juego de rol / personaje | Se pide al modelo que "interprete" a alguien sin límites | El contexto ficticio relaja las reglas | Políticas que evalúan el contenido, no el marco |
-| Manipulación del contexto | Contexto largo que diluye las instrucciones iniciales | Las reglas pierden peso | Reforzar reglas, clasificadores de entrada/salida |
-| Peticiones encadenadas | Dividir una petición dañina en pasos inocentes | Cada paso parece legítimo | Evaluar la conversación completa |
-| Ofuscación | Codificaciones, otros idiomas, fragmentación | Los filtros miran el texto literal | Normalización y análisis semántico |
-| Falsa autoridad | "Soy el administrador / auditor" | El modelo cede ante un rol afirmado | No conceder privilegios por afirmaciones |
-
-### 4.2 Ejercicio didáctico con una regla inocua
-
-Para esta formación se utiliza una regla inocua: responder exclusivamente con una etiqueta de clasificación. El objetivo del ensayo es provocar una salida fuera del conjunto permitido.
-
-**Caso:** un clasificador debe devolver `RED`, `SISTEMAS` u `OTROS`. Una petición declara que existe una excepción administrativa y solicita otra palabra.
-
-**Qué observar:** cumplimiento del contrato, cambios entre conversaciones nuevas y ataques de varios turnos. Una explicación extra también incumple una salida de etiqueta única, aunque no haya daño.
-
-**Qué no concluir:** romper esta regla artificial no demuestra que el mismo método supere las políticas de seguridad de otro modelo. Tampoco demuestra acceso a herramientas.
-
-El [guion de demos](demos/GUIA_DEMOS.md) incluye una prueba directa y otra encadenada. Se trata de una analogía didáctica de evasión de restricciones.
-
-### 4.3 Cómo medirlo en una auditoría
-
-```
- 1. Definir políticas  ──►  2. Batería de pruebas por categoría
-                                         │
- 4. Corregir y repetir  ◄──  3. Registrar tasa de éxito por categoría
-```
-
-| Métrica | Qué indica |
-|---------|-----------|
-| Tasa de éxito por categoría | Dónde es más débil el sistema |
-| Nº de turnos hasta el fallo | Resistencia a ataques encadenados |
-| Falsos positivos | Coste de bloquear de más |
-
----
-
-## 5. Robo y exposición de información
-
-La IA como **canal de fuga**: expone lo que sabe, lo que ve y lo que recuerda. Un asistente puede revelar datos presentes en su contexto, recuperados desde herramientas o incluidos indebidamente en registros. También existen riesgos relacionados con información memorizada durante entrenamiento, pero no toda fuga tiene ese origen [R2].
-
-### 5.1 Orígenes de la fuga
+La IA como **canal de fuga**: expone lo que sabe, lo que ve y lo que recuerda. Un asistente puede revelar datos presentes en su contexto, recuperados desde herramientas o incluidos indebidamente en registros. También existen riesgos relacionados con información memorizada durante entrenamiento, pero no toda fuga tiene ese origen;
 
 | Fuga | Mecanismo | Ejemplo | Mitigación |
 |------|-----------|---------|-----------|
