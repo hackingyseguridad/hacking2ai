@@ -94,9 +94,9 @@ se puede esconder la instrucción en:
 
 ---
 
-## 4. Jailbreaks: intentos de romper restricciones
+## 3. Jailbreaks: romper restricciones
 
-Intentos de romper las restricciones de comportamiento de un modelo. Pueden recurrir a suplantación de roles, escenarios ficticios, reformulación o una conversación progresiva. No todo juego de rol es un ataque: la diferencia está en el intento de vulnerar una regla aplicable. Conviene conocer las **categorías** para poder evaluar y bastionar, sin necesidad de publicar cadenas listas para usar.
+romper las restricciones de comportamiento de un modelo. Pueden recurrir a suplantación de roles, escenarios ficticios, reformulación o una conversación progresiva. No todo juego de rol es un ataque: la diferencia está en el intento de vulnerar una regla aplicable. Conviene conocer las **categorías** para poder evaluar y bastionar, sin necesidad de publicar cadenas listas para usar.
 
 ### 4.1 Categorías
 
