@@ -116,8 +116,6 @@ La IA como **canal de fuga**: expone lo que sabe, lo que ve y lo que recuerda. U
 
 Si el atacante controla **lo que la IA consulta**, controla **lo que la IA responde**, sin tocar el modelo. Conviene distinguir la alteración del entrenamiento, que puede afectar a los parámetros aprendidos, de la manipulación de un corpus RAG, que modifica las fuentes consultadas. Ambas pueden sesgar resultados, pero tienen persistencia y mecanismos diferentes [R4].
 
-### 6.1 Puntos de entrada
-
 | Punto de entrada | Cómo se envenena | Efecto |
 |------------------|------------------|--------|
 | Datos de entrenamiento | Contenido manipulado en el corpus | Sesgos o puertas traseras persistentes |
