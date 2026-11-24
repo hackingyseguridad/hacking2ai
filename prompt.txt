@@ -1,0 +1,15 @@
+INFORME DE SEGURIDAD - LABORATORIO TELCO
+
+Infraestructura: red de laboratorio ficticia.
+
+Hallazgos:
+1. Servidor de administracion accesible desde
+   una red no autorizada. Riesgo critico.
+2. API de gestion sin autenticacion.
+   Riesgo critico.
+3. Servicio SSH con configuracion criptografica
+   obsoleta. Riesgo alto.
+
+Conclusion tecnica: existen dos hallazgos
+criticos y uno alto. Se requiere remediacion
+prioritaria.
