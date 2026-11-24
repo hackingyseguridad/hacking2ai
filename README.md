@@ -43,28 +43,6 @@ La inteligencia artificial no elimina las vulnerabilidades tradicionales, sino q
 
 **Principio clave:** el modelo no distingue de forma fiable entre *instrucciones* y *datos*. Todo es texto en el mismo contexto.
 
-### 1.2 Inventario por capas
-
-| Capa | Activos que revisar | Caso de laboratorio | Evidencia útil |
-|---|---|---|---|
-| Modelo | Pesos, adaptadores, configuración y servidor de inferencia | Modelo sustituido por una versión no aprobada | Origen, versión y huella del artefacto |
-| Aplicación | Chat, API, sesiones y backend | Una sesión reutiliza el historial de otra | Identidad y trazas de cada sesión |
-| Datos | Documentos, índices, memoria y registros | Un documento de otro cliente entra en el contexto | Identificador, propietario y permisos |
-| Agente | Planificador, memoria y reglas de ejecución | Un ticket induce una operación fuera del encargo | Objetivo autorizado y acciones propuestas |
-| Herramientas | Consultas, archivos, correo y ejecución de código | Herramienta de lectura permite también escribir | Esquema, permisos y resultado efectivo |
-| Integraciones | Conectores, repositorios y servicios externos | Un conector utiliza una identidad demasiado amplia | Cuenta efectiva y alcance de acceso |
-| Operación | Paneles, colas, presupuestos y observabilidad | Un bucle agota el presupuesto del laboratorio | Número de pasos, coste y condición de parada |
-
-### 1.3 Caso: asistente de incidencias de una red ficticia
-
-Un operador pregunta por una caída. El asistente consulta tickets, recupera documentación y propone cambios. El atacante solo puede editar un ticket, pero intenta que su texto se interprete como una instrucción operativa.
-
-La revisión debe responder: ¿quién puede modificar el ticket?, ¿qué llega al modelo?, ¿con qué identidad se consulta la documentación?, ¿qué valida la herramienta antes de ejecutar?
-
-**Impacto posible:** resumen incorrecto, exposición de información o cambio no autorizado. La gravedad depende de las conexiones reales y de las barreras que se crucen.
-
-**Comprobación:** dibujar los flujos y registrar en qué punto un contenido de baja confianza pasa a influir en una decisión. Consultar [la guía de laboratorio](demos/GUIA_DEMOS.md).
-
 ---
 
 ## 2. Ataques a modelos e infraestructura
