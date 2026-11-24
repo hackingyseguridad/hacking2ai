@@ -106,6 +106,13 @@ Demostracion:
 
 romper las restricciones de comportamiento de un modelo. Pueden recurrir a suplantación de roles, escenarios ficticios, reformulación o una conversación progresiva. No todo juego de rol es un ataque: la diferencia está en el intento de vulnerar una regla aplicable. Conviene conocer las **categorías** para poder evaluar y bastionar, sin necesidad de publicar cadenas listas para usar.
 
+Demostracion: 
+
+vamos a crear un modelo de IA con restricciones: 
+
+ollama create telco-demo -f Modelfile
+
+
 ## 4. Robo y exposición de información
 
 La IA como **canal de fuga**: expone lo que sabe, lo que ve y lo que recuerda. Un asistente puede revelar datos presentes en su contexto, recuperados desde herramientas o incluidos indebidamente en registros. También existen riesgos relacionados con información memorizada durante entrenamiento, pero no toda fuga tiene ese origen;
