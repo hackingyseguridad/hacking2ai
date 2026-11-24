@@ -8,8 +8,6 @@
 
 La IA como nueva superficie de ataque: modelos, aplicaciones, datos, agentes, herramientas e integraciones.
 
-> Material educativo para auditoría y formación en seguridad de sistemas basados en IA. Léase junto al [aviso legal](#11-aviso-legal).
-
 ## Índice
 
 | # | Categoría | Descripción |
@@ -581,4 +579,4 @@ Fuentes primarias. Se enlazan expresamente las fichas OWASP **2025** utilizadas 
 
 http://www.hackingyseguridad.com/
 
-@antonio_taboada
+
