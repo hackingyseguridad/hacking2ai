@@ -19,7 +19,7 @@ La IA como nueva superficie de ataque: modelos, aplicaciones, datos, agentes, he
 | 5 | Envenenamiento del conocimiento | Manipulación de datos de entrenamiento, fuentes de consulta y bases documentales RAG. |
 | 6 | Hacking de agentes | De manipular respuestas a provocar acciones; abuso de permisos, ejecución de herramientas y acceso a sistemas. |
 
-demo de ataques Jalibreak  y Prompt ingection, utilizaremos Ollama con deppeseek y documentos .txt
+demo de ataques Jalibreak  y Prompt ingection, utilizaremos Ollama con deppeseek 
 
 ---
 
