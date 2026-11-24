@@ -6,23 +6,18 @@
 
 # Hacking a la IA y entre ellas: IA contra IA
 
-•	La IA como nueva superficie de ataque: modelos, aplicaciones, datos, agentes, herramientas e integraciones.
+## Indice:
 
-•	Ataques a modelos e infraestructura: extracción de modelos, APIs expuestas, dependencias comprometidas y consumo abusivo de recursos.
+1.-	La IA como nueva superficie de ataque: modelos, aplicaciones, datos, agentes, herramientas e integraciones.
+2.-	Ataques a modelos e infraestructura: extracción de modelos, APIs expuestas, dependencias comprometidas y consumo abusivo de recursos.
+3.- PROMPT injection; instrucciones IA mediante documentos, que cambian la instrucción/PROMPT inicial, modifican la respuesta. + Demo;
+4.- Jailbreaks: cómo  romper las restricciones; manipulación del contexto y peticiones encadenadas. + Demo;
+5.- Robo de información a través de la IA: exposición de datos sensibles, secretos y documentos; fallos de aislamiento entre usuarios.
+6.- Envenenamiento del conocimiento: manipulación de datos de entrenamiento, fuentes de consulta y bases documentales RAG.
+7.- Hacking de agentes: de manipular respuestas a provocar acciones; abuso de permisos, ejecución de herramientas y acceso a sistemas conectados.
+8.- IA contra IA: automatización del ataque. Modelos que generan y adaptan ataques contra otros modelos; agentes que intentan engañar a otros agentes.
 
-•	Prompt injection; instrucciones IA: inyección directa e indirecta mediante documentos, páginas web y correos electrónicos.
-
-•	Jailbreaks: cómo se intentan romper las restricciones; manipulación del contexto y peticiones encadenadas.
-
-•	Robo de información a través de la IA: exposición de datos sensibles, secretos y documentos; fallos de aislamiento entre usuarios.
-
-•	Envenenamiento del conocimiento: manipulación de datos de entrenamiento, fuentes de consulta y bases documentales RAG.
-
-•	Hacking de agentes: de manipular respuestas a provocar acciones; abuso de permisos, ejecución de herramientas y acceso a sistemas conectados.
-
-•	IA contra IA: automatización del ataque. Modelos que generan y adaptan ataques contra otros modelos; agentes que intentan engañar a otros agentes.
-
-ollama run llama2:7b
+para las demo utilizaremos ollama run llama2:7b
 
 ---
 
