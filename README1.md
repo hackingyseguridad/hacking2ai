@@ -212,7 +212,7 @@ La automatización del ataque: un modelo **genera, prueba y adapta** ataques con
  └───────────────┘             └───────────────┘
 ```
 
-### 9. Conclusiones
+### Conclusiones
 
 | # | Conclusión |
 |---|-----------|
@@ -227,7 +227,7 @@ La automatización del ataque: un modelo **genera, prueba y adapta** ataques con
 
 ---
 
-### 10. Marcos de referencia
+### Marco de referencia:
 
 | Marco | Enfoque | Enlace |
 |-------|---------|--------|
@@ -238,7 +238,7 @@ La automatización del ataque: un modelo **genera, prueba y adapta** ataques con
 
 ---
 
-### 11. Aviso legal
+### Aviso legal:
 
 Este repositorio es **exclusivamente para uso educativo y para pruebas de auditoría autorizadas, controladas y en entornos de pruebas**.
 
@@ -253,7 +253,7 @@ El autor no se hace responsable del uso indebido. Prueba solo en sistemas **prop
 
 ---
 
-### 12. Referencias
+### Referencias:
 
 Fuentes primarias. Se enlazan expresamente las fichas OWASP **2025** utilizadas como referencia; la numeración no se presenta como una edición 2026. Los casos y prompts del laboratorio son ejemplos originales de este material, no reproducciones de incidentes ni validaciones de productos concretos.
 
