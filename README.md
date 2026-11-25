@@ -249,7 +249,7 @@ La automatización del ataque: un modelo **genera, prueba y adapta** ataques con
 
 ---
 
-### Marco de referencia:
+### Marco de ref.:
 
 | Marco | Enfoque | Enlace |
 |-------|---------|--------|
