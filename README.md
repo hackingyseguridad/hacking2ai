@@ -4,7 +4,7 @@
 
 ---
 
-# Hacking a la IA y entre ellas: IA contra IA
+## Hacking a la IA y entre ellas: IA contra IA
 
 ## Indice:
 
