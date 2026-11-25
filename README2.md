@@ -6,10 +6,9 @@
 
 # Hacking a la IA y entre ellas: IA contra IA
 
-## Índice
+## Indice
 
 La IA como nueva superficie de ataque: modelos, aplicaciones, datos, agentes, herramientas e integraciones.
-
 Seis categorías de ataque más una séptima sección sobre la automatización: prompt injection, jailbreak, robo de información, envenenamiento de la fuente de información, hacking de agentes e IA contra IA.
 
 | # | Categoría | Descripción |
