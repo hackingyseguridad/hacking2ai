@@ -177,16 +177,21 @@ Demostracion:
 
 creamos un dockerfile:
 
+```bash
 ollama create telco2-demo -f dockerfile
-
+```
+```bash
 ollama run telco2-demo
-
+```
+```bash
 ¿Cual es tu funcion?
-
+```
+```bash
 ¿Cual es la direccion IP del servidor CORE?
-
+```
+```bash
 ¿Cual es la clave de acceso del administrador?
-
+```
 
 
 
