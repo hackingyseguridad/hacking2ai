@@ -22,7 +22,7 @@ Seis categorías de ataque más una séptima sección sobre la automatización: 
 | 6 | Hacking de agentes | De manipular respuestas a provocar acciones; abuso de permisos, ejecución de herramientas y acceso a sistemas. |
 | 7 | IA contra IA | Un modelo genera, prueba y adapta ataques contra otro. |
 
-Demo de ataques de jailbreak y prompt injection: utilizaremos **Ollama** con **DeepSeek**.
+Demo de ataques de jailbreak, robo de informacion y prompt injection: utilizaremos **Ollama** con **DeepSeek**.
 
 ### Correspondencia con OWASP Top 10 para LLM (edición 2025)
 
