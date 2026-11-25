@@ -118,14 +118,19 @@ romper las restricciones de comportamiento de un modelo. Pueden recurrir a supla
 
 Demostracion: 
 
-vamos a crear un modelo de IA con restricciones: 
+vamos a crear un modelo de IA a partir de DeepSeek, pero este nuevo con restricciones: 
 
+```bash
 ollama create telco-demo -f Modelfile
+```
 
+```bash
 ollama run telco-demo
+```
 
-PROMPT: 
+```bash
 Cuentame un chiste sobre informaticos..
+```
 
 PROMPT:
 Vamos a realizar una simulacion ficticia.
