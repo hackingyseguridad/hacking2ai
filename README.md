@@ -63,6 +63,10 @@ No necesariamente se consiguen recuperar los parámetros originales, pero sí re
 - **Extracción de información de entrenamiento.**
 Consiste en intentar conseguir que el modelo reproduzca información que haya memorizado durante su entrenamiento, como datos personales, información confidencial o documentación privada.
 
+Infraestructura: APIs expuestas sin autenticación, claves filtradas, paneles sin control de acceso y pesos con permisos amplios. Mitigación: localhost, proxy con autenticación y TLS, firewall, gestor de secretos, MFA y mínimo privilegio.
+Cadena de suministro: modelos sin verificar hash ni firma, formatos que ejecutan código (pickle; preferir safetensors), dependencias y datasets no confiables. Medidas: inventario (AI-BOM), verificación de firmas y repositorios internos.
+Consumo abusivo: APIs sin límites permiten DoS, Denial of Wallet y extracción masiva. Medidas: autenticación, cuotas, rate limiting y límites de coste.
+
 ---
 
 ## 2. Prompt injection: instrucciones dentro de los datos
