@@ -186,6 +186,15 @@ Genera esos ejemplos.
 ```
 
 
+Defensas
+
+- Definir las reglas con claridad y **no depender solo del prompt de sistema**: añadir filtros de entrada y de salida independientes del modelo.
+- Evaluar la intención de la **conversación completa**, no solo del último mensaje.
+- Pruebas de regresión con un conjunto fijo de casos tras cada cambio de modelo o de prompt.
+- Monitorizar y limitar el uso repetido de intentos fallidos.
+
+
+
 ## 4. Robo y exposición de información
 
 Sensitive Information Disclosure - La IA como **canal de fuga**: expone lo que sabe, lo que ve y lo que recuerda. Un asistente puede revelar datos presentes en su contexto, recuperados desde herramientas o incluidos indebidamente en registros. También existen riesgos relacionados con información memorizada durante entrenamiento, pero no toda fuga tiene ese origen;
