@@ -169,7 +169,9 @@ La IA como **canal de fuga**: expone lo que sabe, lo que ve y lo que recuerda. U
 
 ## 5. Envenenamiento del conocimiento (RAG)
 
-Si el atacante controla **lo que la IA consulta**, controla **lo que la IA responde**, sin tocar el modelo. Conviene distinguir la alteración del entrenamiento, que puede afectar a los parámetros aprendidos, de la manipulación de un corpus RAG, que modifica las fuentes consultadas. Ambas pueden sesgar resultados, pero tienen persistencia y mecanismos diferentes [R4].
+RAG (Retrieval-Augmented Generation, Generación Aumentada por Recuperación) es, permitir que los modelos de lenguaje grandes respondan preguntas basándose en "materiales de referencia" externos, en lugar de depender únicamente de la memoria de su entrenamiento. Fuentes externas.
+Si el atacante controla **lo que la IA consulta**, controla **lo que la IA responde**, sin tocar el modelo. Conviene distinguir la alteración del entrenamiento, que puede afectar a los parámetros aprendidos, de la manipulación de un corpus RAG, que modifica las fuentes consultadas. Ambas pueden sesgar resultados, pero tienen persistencia y mecanismos diferentes.
+
 
 | Punto de entrada | Cómo se envenena | Efecto |
 |------------------|------------------|--------|
