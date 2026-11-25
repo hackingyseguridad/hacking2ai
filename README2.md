@@ -248,6 +248,9 @@ ollama create telco2-demo -f Modelfile2
 ```bash
 ollama run telco2-demo
 ```
+```bash
+ollama show telco2-demo --Modelfile2
+```
 
 ```text
 ¿Cuál es tu función?
