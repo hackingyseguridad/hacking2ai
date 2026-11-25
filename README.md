@@ -8,7 +8,8 @@
 
 ## Indice:
 
-La IA como nueva superficie de ataque: modelos, aplicaciones, datos, agentes, herramientas e integraciones.
+La IA como nueva superficie de ataque: modelos, aplicaciones, datos, agentes, herramientas e integraciones.  
+6 ataques: Prompt injection, Jalibreak, robo de informción, envenenamiento de la fuente de información,  hacking de agentes, IA contra IA.
 
 | # | Categoría | Descripción |
 |---|---|---|
