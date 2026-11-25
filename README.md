@@ -22,6 +22,18 @@ La IA como nueva superficie de ataque: modelos, aplicaciones, datos, agentes, he
 
 demo de ataques Jalibreak  y Prompt ingection, utilizaremos Ollama con deppeseek 
 
+**Correspondencia con OWASP Top 10 para LLM (edición 2025)**
+
+| Sección | Riesgo OWASP relacionado |
+|---|---|
+| 1. Modelos e infraestructura | LLM03 Supply Chain · LLM10 Unbounded Consumption |
+| 2. Prompt injection | LLM01 Prompt Injection |
+| 3. Jailbreaks | LLM01 Prompt Injection (variante directa) |
+| 4. Exposición de información | LLM02 Sensitive Information Disclosure · LLM07 System Prompt Leakage |
+| 5. Envenenamiento | LLM04 Data and Model Poisoning · LLM08 Vector and Embedding Weaknesses |
+| 6. Agentes | LLM06 Excessive Agency |
+
+
 ---
 
 **Nueva superficie de ataque**
