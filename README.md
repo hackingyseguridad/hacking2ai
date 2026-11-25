@@ -82,6 +82,8 @@ Cadena de suministro: modelos sin verificar hash ni firma, formatos que ejecutan
 
 Consumo de recursos: APIs "sin límites" permiten DoS, denial of wallet y extracción masiva. medidas: autenticación, cuotas, rate limiting y límites de coste.
 
+**Contra-medidas:** autenticación, cuotas y *rate limiting* por usuario, límite de longitud de contexto y de salida, límites de coste, monitorización de patrones anómalos de consulta
+
 ---
 
 ## 2. Prompt injection: instrucciones dentro de los datos
