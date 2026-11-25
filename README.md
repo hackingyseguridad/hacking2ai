@@ -162,7 +162,7 @@ Genera esos ejemplos.
 
 ## 4. Robo y exposición de información
 
-La IA como **canal de fuga**: expone lo que sabe, lo que ve y lo que recuerda. Un asistente puede revelar datos presentes en su contexto, recuperados desde herramientas o incluidos indebidamente en registros. También existen riesgos relacionados con información memorizada durante entrenamiento, pero no toda fuga tiene ese origen;
+Sensitive Information Disclosure - La IA como **canal de fuga**: expone lo que sabe, lo que ve y lo que recuerda. Un asistente puede revelar datos presentes en su contexto, recuperados desde herramientas o incluidos indebidamente en registros. También existen riesgos relacionados con información memorizada durante entrenamiento, pero no toda fuga tiene ese origen;
 
 | Fuga | Mecanismo | Ejemplo | Mitigación |
 |------|-----------|---------|-----------|
