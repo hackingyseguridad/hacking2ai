@@ -15,7 +15,7 @@ La IA como nueva superficie de ataque: modelos, aplicaciones, datos, agentes, he
 | 1 | Ataques a modelos e infraestructura | Extracción de modelos, APIs expuestas, dependencias comprometidas y consumo abusivo de recursos. |
 | 2 | Prompt injection | Instrucciones a la IA mediante documentos que cambian la instrucción/prompt inicial y modifican la respuesta. |
 | 3 | Jailbreaks | Cómo romper las restricciones; manipulación del contexto y peticiones encadenadas. |
-| 4 | Robo de información a través de la IA | Exposición de datos sensibles, secretos y documentos; fallos de aislamiento entre usuarios. |
+| 4 | Fuga/robo de información  | Exposición de datos sensibles, secretos y documentos; fallos de aislamiento entre usuarios. |
 | 5 | Envenenamiento del conocimiento | Manipulación de datos de entrenamiento, fuentes de consulta y bases documentales RAG. |
 | 6 | Hacking de agentes | De manipular respuestas a provocar acciones; abuso de permisos, ejecución de herramientas y acceso a sistemas. |
 
