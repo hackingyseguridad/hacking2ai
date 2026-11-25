@@ -67,7 +67,7 @@ Infraestructura: APIs expuestas sin autenticación, claves filtradas, paneles si
 
 Cadena de suministro: modelos sin verificar hash ni firma, formatos que ejecutan código (pickle; preferir safetensors), dependencias y datasets no confiables. Medidas: inventario (AI-BOM), verificación de firmas y repositorios internos.
 
-Consumo abusivo: APIs sin límites permiten DoS, Denial of Wallet y extracción masiva. Medidas: autenticación, cuotas, rate limiting y límites de coste.
+Consumo de recursos: APIs "sin límites" permiten DoS, denial of wallet y extracción masiva. medidas: autenticación, cuotas, rate limiting y límites de coste.
 
 ---
 
