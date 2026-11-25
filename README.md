@@ -95,9 +95,14 @@ se puede esconder la instrucción en:
 
 Demostracion:
 
-(echo "Analiza y resume el siguiente informe de seguridad:"; cat prompt.txt) | ollama run deepseek-r1:1.5b
+```bash
+(echo "Analiza y resume el siguiente informe de seguridad:"; cat prompt.txt)  | ollama run deepseek-r1:1.5b
+```
+```bash
+(echo "Analiza y resume el siguiente informe de seguridad:"; cat prompt2.txt)  | ollama run deepseek-r1:1.5b
+```
 
-(echo "Analiza y resume el siguiente informe de seguridad:"; cat prompt2.txt) | ollama run deepseek-r1:1.5b
+
 
 
 
