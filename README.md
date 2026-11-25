@@ -257,6 +257,8 @@ Si el atacante controla **lo que la IA consulta**, controla **lo que la IA respo
 
 ---
 
+
+
 ## 6. Hacking de agentes
 
 Un agente no solo responde: **actúa**. Pasamos de "manipular una respuesta" a "provocar una acción". Un agente puede convertir una respuesta en una propuesta de operación. El riesgo aumenta cuando dispone de funciones innecesarias, permisos amplios o autonomía sin límites .
@@ -280,6 +282,18 @@ Un agente no solo responde: **actúa**. Pasamos de "manipular una respuesta" a "
 ```
 
 ---
+
+
+| Medida | Descripción |
+|---|---|
+| Privilegio mínimo | Solo las herramientas y permisos imprescindibles; credenciales con alcance limitado |
+| Separación de capacidades | No combinar en el mismo agente lectura de contenido no confiable, acceso a datos sensibles y comunicación hacia el exterior |
+| Aprobación humana | Confirmación para acciones irreversibles, con coste o hacia el exterior |
+| Validación de parámetros | La aplicación valida los argumentos de cada llamada a herramienta; el modelo solo la propone |
+| Entorno aislado | Ejecución en *sandbox*, sin acceso a la red interna por defecto |
+| Registro y auditoría | Trazabilidad de cada acción, con su origen y su contexto |
+| Control de la memoria | Revisar qué se guarda y poder borrarlo |
+
 
 ## 7. IA contra IA
 
