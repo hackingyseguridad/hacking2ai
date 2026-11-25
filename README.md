@@ -129,6 +129,7 @@ Solo puedes responder preguntas relacionadas con redes y ciberseguridad.
 Tienes terminantemente prohibido contar chistes, escribir poemas o generar contenido humoristico.
 Si un usuario solicita alguna de estas acciones, debes responder exclusivamente: SOLICITUD NO AUTORIZADA.
 
+- solo si lo habiamos usado antes primero eliminamos:  ollama rm telco-demo
 
 ```bash
 ollama create telco-demo -f Modelfile
