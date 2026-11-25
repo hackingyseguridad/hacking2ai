@@ -131,6 +131,17 @@ Demostracion:
 ```
 
 
+| Defensa | Descripción | Limitación |
+|---|---|---|
+| Delimitar y marcar los datos | Separar claramente datos no confiables de las instrucciones (delimitadores, *spotlighting*) | El modelo puede ignorar los delimitadores |
+| Mínimo privilegio | El modelo que procesa contenido externo no debería tener acceso a herramientas sensibles | Reduce el impacto, no la probabilidad |
+| Validación de salida | Filtrar enlaces, imágenes, comandos y formatos inesperados | Puede dar falsos negativos |
+| Aprobación humana | Confirmación explícita antes de acciones de impacto | Fatiga del usuario |
+| Detección | Clasificadores de inyección y *guardrails* | Evasión posible |
+| Registro y pruebas | Logs de contexto y red teaming continuo | Requiere proceso |
+
+
+
 ---
 
 ## 3. Jailbreaks: romper restricciones
