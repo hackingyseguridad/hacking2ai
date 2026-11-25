@@ -212,24 +212,22 @@ La automatización del ataque: un modelo **genera, prueba y adapta** ataques con
  └───────────────┘             └───────────────┘
 ```
 
-### Conclusiones
+### 9. Conclusiones
 
 | # | Conclusión |
 |---|-----------|
-| 1 | El modelo **no separa** instrucciones de datos: asume que cualquier texto externo es hostil. Los documentos consultados pueden contener instrucciones adversariales. |
+| 1 | El modelo **no separa** instrucciones de datos: asume que cualquier texto externo puede ser hostil. Los documentos consultados pueden contener instrucciones adversariales. |
 | 2 | El riesgo crece con la **autonomía**: un chat falla en palabras; un agente falla en acciones. Los permisos del agente determinan cuánto puede afectar una manipulación. |
 | 3 | Controla **lo que la IA lee** (RAG, web, correo) tanto como lo que se le pregunta. Una respuesta convincente o citada puede estar basada en una fuente manipulada. |
 | 4 | Aplica **privilegio mínimo** y **aprobación humana** donde el daño sea irreversible. |
 | 5 | Ningún filtro es suficiente: **defensa en profundidad** y pruebas continuas. Los fallos de aislamiento pueden ocurrir antes de que intervenga el modelo. |
 | 6 | Automatiza la auditoría: **IA contra IA** también sirve para defender, aunque necesita límites y evaluación fiable. |
 | 7 | La seguridad requiere controles en toda la aplicación, además del comportamiento del modelo. |
+| 8 | Mide: define casos de prueba reproducibles y repítelos tras cada cambio de modelo, prompt o conector. |
 
 ---
 
-
----
-
-## Marcos de referencia
+### 10. Marcos de referencia
 
 | Marco | Enfoque | Enlace |
 |-------|---------|--------|
@@ -240,30 +238,13 @@ La automatización del ataque: un modelo **genera, prueba y adapta** ataques con
 
 ---
 
-## Referencias
+### 11. Aviso legal
 
-Fuentes primarias consultadas el **8 de octubre de 2026**. Se enlazan expresamente las fichas OWASP **2025** utilizadas como referencia; la numeración no se presenta como una edición 2026. Los casos y prompts del laboratorio son ejemplos originales de este material, no reproducciones de incidentes ni validaciones de productos concretos.
-
-- **[R1]** OWASP — [LLM01:2025 Prompt Injection](https://genai.owasp.org/llmrisk/llm01-prompt-injection/).
-- **[R2]** OWASP — [LLM02:2025 Sensitive Information Disclosure](https://genai.owasp.org/llmrisk/llm022025-sensitive-information-disclosure/).
-- **[R3]** OWASP — [LLM03:2025 Supply Chain](https://genai.owasp.org/llmrisk/llm032025-supply-chain/).
-- **[R4]** OWASP — [LLM04:2025 Data and Model Poisoning](https://genai.owasp.org/llmrisk/llm042025-data-and-model-poisoning/).
-- **[R5]** OWASP — [LLM10:2025 Unbounded Consumption](https://genai.owasp.org/llmrisk/llm102025-unbounded-consumption/).
-- **[R6]** OWASP — [LLM06:2025 Excessive Agency](https://genai.owasp.org/llmrisk/llm062025-excessive-agency/).
-- **[R7]** Greshake et al. — [Not what you've signed up for: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection](https://arxiv.org/abs/2302.12173), 2023.
-- **[R8]** Tramèr et al. — [Stealing Machine Learning Models via Prediction APIs](https://arxiv.org/abs/1609.02943), 2016.
-- **[R9]** Chao et al. — [Jailbreaking Black Box Large Language Models in Twenty Queries](https://arxiv.org/abs/2310.08419), 2023; revisión de 2024.
-- **[R10]** MITRE — [ATLAS](https://atlas.mitre.org/), catálogo de tácticas, técnicas y casos de amenazas contra sistemas de IA.
-
----
-
-## Aviso legal
-
-Este repositorio es **exclusivamente para uso educativo y para uso educativo en pruebas de auditorías autorizadas, controladas y entornos de pruebas**.
+Este repositorio es **exclusivamente para uso educativo y para pruebas de auditoría autorizadas, controladas y en entornos de pruebas**.
 
 | Norma | Relevancia |
 |-------|-----------|
-| Código Penal español, **art. 197–198** | Acceso y revelación de datos y secretos sin autorización |
+| Código Penal español, **arts. 197–198** | Acceso y revelación de datos y secretos sin autorización |
 | **RGPD** | Tratamiento de datos personales y notificación de brechas |
 | **NIS2** | Obligaciones de ciberseguridad en entidades esenciales e importantes |
 | **CFAA** (EE. UU.) | Acceso no autorizado a sistemas informáticos |
@@ -272,21 +253,31 @@ El autor no se hace responsable del uso indebido. Prueba solo en sistemas **prop
 
 ---
 
-## Glosario
+### 12. Referencias
 
-| Término | Significado |
-|---|---|
-| LLM | Modelo de lenguaje de gran tamaño |
-| RAG | Recuperación de documentos para aportar contexto a la generación |
-| Embedding | Representación numérica utilizada, entre otras cosas, para búsqueda por similitud |
-| ACL | Lista de control de acceso |
-| Tenant | Ámbito lógico de un cliente dentro de un servicio compartido |
-| Tool calling | Propuesta estructurada del modelo para invocar una función; la aplicación decide su ejecución |
-| Guardrail | Medida que restringe o supervisa entradas, salidas o acciones |
-| Red teaming | Evaluación adversarial con objetivos, alcance y evidencias definidos |
+Fuentes primarias. Se enlazan expresamente las fichas OWASP **2025** utilizadas como referencia; la numeración no se presenta como una edición 2026. Los casos y prompts del laboratorio son ejemplos originales de este material, no reproducciones de incidentes ni validaciones de productos concretos.
+
+- **[R1]** OWASP: [LLM01:2025 Prompt Injection](https://genai.owasp.org/llmrisk/llm01-prompt-injection/).
+- **[R2]** OWASP: [LLM02:2025 Sensitive Information Disclosure](https://genai.owasp.org/llmrisk/llm022025-sensitive-information-disclosure/).
+- **[R3]** OWASP: [LLM03:2025 Supply Chain](https://genai.owasp.org/llmrisk/llm032025-supply-chain/).
+- **[R4]** OWASP: [LLM04:2025 Data and Model Poisoning](https://genai.owasp.org/llmrisk/llm042025-data-and-model-poisoning/).
+- **[R5]** OWASP: [LLM10:2025 Unbounded Consumption](https://genai.owasp.org/llmrisk/llm102025-unbounded-consumption/).
+- **[R6]** OWASP: [LLM06:2025 Excessive Agency](https://genai.owasp.org/llmrisk/llm062025-excessive-agency/).
+- **[R7]** Greshake et al.: [Not what you've signed up for: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection](https://arxiv.org/abs/2302.12173), 2023.
+- **[R8]** Tramèr et al.: [Stealing Machine Learning Models via Prediction APIs](https://arxiv.org/abs/1609.02943), 2016.
+- **[R9]** Chao et al.: [Jailbreaking Black Box Large Language Models in Twenty Queries](https://arxiv.org/abs/2310.08419), 2023; revisión de 2024.
+- **[R10]** MITRE: [ATLAS](https://atlas.mitre.org/), catálogo de tácticas, técnicas y casos de amenazas contra sistemas de IA.
+- **[R11]** Carlini et al.: [Extracting Training Data from Large Language Models](https://arxiv.org/abs/2012.07805), 2020.
+- **[R12]** Zou et al.: [Universal and Transferable Adversarial Attacks on Aligned Language Models](https://arxiv.org/abs/2307.15043), 2023.
+- **[R13]** OWASP: [LLM07:2025 System Prompt Leakage](https://genai.owasp.org/llmrisk/llm072025-system-prompt-leakage/).
+- **[R14]** Carlini et al.: [Poisoning Web-Scale Training Datasets is Practical](https://arxiv.org/abs/2302.10149), 2023.
+- **[R15]** Zou et al.: [PoisonedRAG: Knowledge Corruption Attacks to Retrieval-Augmented Generation of Large Language Models](https://arxiv.org/abs/2402.07867), 2024.
+- **[R16]** Mehrotra et al.: [Tree of Attacks: Jailbreaking Black-Box LLMs Automatically](https://arxiv.org/abs/2312.02119), 2023.
 
 ---
 
-http://www.hackingyseguridad.com/
 
+#
+https://www.hackingyseguridad.com/
+#
 
