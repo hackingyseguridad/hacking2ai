@@ -22,7 +22,7 @@ Seis ataques: prompt injection, jailbreak, robo de información, envenenamiento 
 | 6 | Hacking de agentes | De manipular respuestas a provocar acciones; abuso de permisos, ejecución de herramientas y acceso a sistemas. |
 | 7 | IA contra IA | Un modelo genera, prueba y adapta ataques contra otro. |
 
-Demo de ataques de jailbreak, robo de informacion y prompt injection: utilizaremos **Ollama** con **qwen2.5:1.5b**.
+Demo de ataques de jailbreak, robo de informacion y prompt injection: utilizaremos **Ollama** con **qwen2.5:1.5b**, IA en local.
 
 ### Correspondencia con OWASP Top 10 para LLM (edición 2025)
 
