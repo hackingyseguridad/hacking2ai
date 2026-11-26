@@ -53,9 +53,9 @@ Superficies de ataque:
 - Las bases de conocimiento.
 - Los datos de entrenamiento.
 
-La inteligencia artificial no elimina las vulnerabilidades tradicionales, sino que añade otras nuevas.
+La inteligencia artificial no elimina las vulnerabilidades tradicionales, aparecen otras nuevas.
 
-> **Principio clave:** el modelo no distingue de forma fiable entre *instrucciones* y *datos*. Todo es texto en el mismo contexto.
+> el modelo no distingue de forma fiable entre *instrucciones* y *datos*. Todo es texto en el mismo contexto.
 
 ---
 
