@@ -322,7 +322,7 @@ Ataque que consiste en manipular/ intoxicar o envenenar, las fuentes de conocimi
 
 ## 6. Hacking de agentes
 
-este ataque consiste en abusar del agente, de los permisos que tiene y del acceso que tiene a aplicaciones, sistemas, web /api, BBDD, etc.. ; r lo que el agente hace mediente intrucciones PROMPT de forma directa o indirecta, pedirle que haga cosas distintas a las incialmente previstas
+este ataque consiste en abuso y "encadenado de acciones" del agente, de los permisos que tiene y del acceso que tiene a distintas aplicaciones, sistemas, web /api, BBDD, etc.. ; lo que el agente hace mediente intrucciones PROMPT de forma directa o indirecta, pedirle que haga cosas distintas a las incialmente previstas
 
 | Riesgo | Descripción | Ejemplo |
 |--------|-------------|---------|
