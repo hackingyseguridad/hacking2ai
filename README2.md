@@ -126,19 +126,19 @@ La instrucción se puede esconder en:
 > vamos a camuflar instrucciones encubiertas en un fichero para que la IA procese y provocar que devuelva un resultado muy distinto
 
 ```bash
-(echo "Analiza y resume el siguiente informe de seguridad:"; cat prompt.txt) | ollama run deepseek-r1:1.5b
+(echo "Analiza y resume el siguiente informe de seguridad:"; cat prompt.txt) | ollama run deepseek-r1:1.5b --hidethinking
 ```
 
 ```bash
-(echo "Analiza y resume el siguiente informe de seguridad:"; cat prompt2.txt) | ollama run deepseek-r1:1.5b
+(echo "Analiza y resume el siguiente informe de seguridad:"; cat prompt2.txt) | ollama run deepseek-r1:1.5b --hidethinking
 ```
 
 ```bash
-(echo "Analiza y resume la siguiente factura:"; cat factura.txt) | ollama run deepseek-r1:1.5b
+(echo "Analiza y resume la siguiente factura:"; cat factura.txt) | ollama run deepseek-r1:1.5b --hidethinking
 ```
 
 ```bash
-(echo "Analiza y resume la siguiente factura:"; cat factura2.txt) | ollama run deepseek-r1:1.5b
+(echo "Analiza y resume la siguiente factura:"; cat factura2.txt) | ollama run deepseek-r1:1.5b --hidethinking
 ```
 
 ### Defensas
@@ -177,7 +177,7 @@ ollama create telco-demo -f Modelfile
 ```
 
 ```bash
-ollama run telco-demo 
+ollama run telco-demo  --hidethinking
 ```
 
 Petición directa:
@@ -219,7 +219,7 @@ Genera esos ejemplos.
 
 ## 4. Robo y exposición de información
 
-*Sensitive Information Disclosure*: la IA como **canal de fuga**. Expone lo que sabe, lo que ve y lo que recuerda. Un asistente puede revelar datos presentes en su contexto, recuperados desde herramientas o incluidos indebidamente en registros. También existen riesgos relacionados con información memorizada durante el entrenamiento, pero no toda fuga tiene ese origen.
+Ataque con el que intentariamos con instrucciones/PROMPTs **saltar las barreras** los guardarraíles del modelo para obtener información sensible: **Sensitive Information Disclosure**: esa información puede venir de su contexto, de alguna herramienta a la que tenga acceso o del propio entrenamiento.
 
 | Fuga | Mecanismo | Ejemplo | Mitigación |
 |------|-----------|---------|-----------|
@@ -273,11 +273,9 @@ ollama show telco2-demo --modelfile
 
 ---
 
-## 5. Envenenamiento del conocimiento (RAG)
+## 5. Envenenamiento del conocimiento (RAG poisoning)
 
-**RAG** (*Retrieval-Augmented Generation*, Generación Aumentada por Recuperación) permite que los modelos de lenguaje respondan preguntas basándose en "materiales de referencia" externos, en lugar de depender únicamente de la memoria de su entrenamiento.
-
-Si el atacante controla **lo que la IA consulta**, controla **lo que la IA responde**, sin tocar el modelo. Conviene distinguir la alteración del entrenamiento, que puede afectar a los parámetros aprendidos, de la manipulación de un corpus RAG, que modifica las fuentes consultadas. Ambas pueden sesgar resultados, pero tienen persistencia y mecanismos diferentes.
+Ataque que consiste en manipular/ intoxicar o envenenar, las fuentes de conocimiento, para que el modelo de una respuesta falta; Por  ej. en documnentos: PDF, DOC, TXT, paginas web, WIKI corporativos, BBDD, repositorios;  **RAG** permite que los modelos de lenguaje consulten información externa y es esas fuentes externas donde manipulamos la información. 
 
 | Punto de entrada | Cómo se envenena | Efecto |
 |------------------|------------------|--------|
@@ -305,7 +303,7 @@ Si el atacante controla **lo que la IA consulta**, controla **lo que la IA respo
 
 ## 6. Hacking de agentes
 
-Un agente no solo responde: **actúa**. Pasamos de "manipular una respuesta" a "provocar una acción". Un agente puede convertir una respuesta en una propuesta de operación. El riesgo aumenta cuando dispone de funciones innecesarias, permisos amplios o autonomía sin límites.
+este ataque consiste en manipular lo que el agente hace, mediente intrucciones PROMPT injection de forma directa o indirecta, aprovenchando que un ajente tiene acceso a aplicacione y permisos amplios podemos hacer que haga cosas distintas a las incialmente previstas
 
 | Riesgo | Descripción | Ejemplo |
 |--------|-------------|---------|
@@ -341,6 +339,7 @@ Un agente no solo responde: **actúa**. Pasamos de "manipular una respuesta" a "
 
 ## 7. IA contra IA
 
+El ataque consiste en conectar a una IA, con otra para que probar ataques y combinaciones de ataques y descrubrir las vulnerabilidades del modelo analizado;  
 La automatización del ataque: un modelo **genera, prueba y adapta** ataques contra otro. Un modelo puede generar variantes de entrada para evaluar otro modelo. PAIR estudia un procedimiento de refinamiento iterativo en el que un modelo atacante utiliza respuestas del modelo objetivo para modificar sus propuestas [[R9]](https://arxiv.org/abs/2310.08419). Sus resultados corresponden a los modelos y condiciones del estudio, no a una tasa universal de éxito.
 
 ```
@@ -423,3 +422,5 @@ Fuentes primarias. Se enlazan expresamente las fichas OWASP **2025** utilizadas 
 #
 [www.hackingyseguridad.com](https://www.hackingyseguridad.com/)
 #
+#
+
