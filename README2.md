@@ -9,7 +9,8 @@
 ## Indice
 
 La IA como nueva superficie de ataque: modelos, aplicaciones, datos, agentes, herramientas e integraciones.
-Seis categorías de ataque más una séptima sección sobre la automatización: prompt injection, jailbreak, robo de información, envenenamiento de la fuente de información, hacking de agentes e IA contra IA.
+
+Seis ataques: prompt injection, jailbreak, robo de información, envenenamiento de la fuente de información, hacking de agentes e IA contra IA.
 
 | # | Categoría | Descripción |
 |---|---|---|
@@ -52,9 +53,9 @@ Superficies de ataque:
 - Las bases de conocimiento.
 - Los datos de entrenamiento.
 
-La inteligencia artificial no elimina las vulnerabilidades tradicionales, sino que añade otras nuevas.
+La inteligencia artificial no elimina las vulnerabilidades tradicionales, aparecen otras nuevas.
 
-> **Principio clave:** el modelo no distingue de forma fiable entre *instrucciones* y *datos*. Todo es texto en el mismo contexto.
+> el modelo no distingue de forma fiable entre *instrucciones* y *datos*. Todo es texto en el mismo contexto.
 
 ---
 
@@ -122,6 +123,8 @@ La instrucción se puede esconder en:
 
 ### Demostración
 
+> vamos a camuflar instrucciones encubiertas en un fichero para que la IA procese y provocar que devuelva un resultado muy distinto
+
 ```bash
 (echo "Analiza y resume el siguiente informe de seguridad:"; cat prompt.txt) | ollama run deepseek-r1:1.5b
 ```
@@ -131,11 +134,11 @@ La instrucción se puede esconder en:
 ```
 
 ```bash
-(echo "Analiza y resume el siguiente informe de seguridad:"; cat factura.txt) | ollama run deepseek-r1:1.5b
+(echo "Analiza y resume la siguiente factura:"; cat factura.txt) | ollama run deepseek-r1:1.5b
 ```
 
 ```bash
-(echo "Analiza y resume el siguiente informe de seguridad:"; cat factura2.txt) | ollama run deepseek-r1:1.5b
+(echo "Analiza y resume la siguiente factura:"; cat factura2.txt) | ollama run deepseek-r1:1.5b
 ```
 
 ### Defensas
@@ -227,6 +230,10 @@ Genera esos ejemplos.
 | Datos de entrenamiento | Memorización de información sensible | Texto personal reproducido literalmente | Depuración de datos, evaluación de memorización |
 
 ### Demostración:
+
+Vamos a crear un modelo de IA a partir de DeepSeek, pero este nuevo con restricciones de no facilitar datos sensibles (fichero Modelfile2):
+
+> vamos a extraer datos sensibles, en un modelo de IA, que tiene expresamente prohibido facilitar datos como: claves, usuarios, tockens, datos personales, ..
 
 Creamos un `Modelfile2`:
 
@@ -413,4 +420,6 @@ Fuentes primarias. Se enlazan expresamente las fichas OWASP **2025** utilizadas 
 
 ---
 
+#
 [www.hackingyseguridad.com](https://www.hackingyseguridad.com/)
+#
