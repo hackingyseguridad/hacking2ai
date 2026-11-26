@@ -130,7 +130,7 @@ La instrucción se puede esconder en:
 ```
 
 ```bash
-(echo "Analiza y resume el siguiente informe de seguridad:"; cat prompt2.txt) | ollama run deepseek-r1:1.5b
+(echo "Analiza y resume el siguiente informe de seguridad:"; cat prompt2.txt) | ollama run deepseek-r1:1.5b --hidethinking
 ```
 
 ```bash
