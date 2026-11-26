@@ -339,6 +339,7 @@ este ataque consiste en manipular lo que el agente hace, mediente intrucciones P
 
 ## 7. IA contra IA
 
+El ataque consiste en conectar a una IA, con otra para que probar ataques y combinaciones de ataques y descrubrir las vulnerabilidades del modelo analizado;  
 La automatización del ataque: un modelo **genera, prueba y adapta** ataques contra otro. Un modelo puede generar variantes de entrada para evaluar otro modelo. PAIR estudia un procedimiento de refinamiento iterativo en el que un modelo atacante utiliza respuestas del modelo objetivo para modificar sus propuestas [[R9]](https://arxiv.org/abs/2310.08419). Sus resultados corresponden a los modelos y condiciones del estudio, no a una tasa universal de éxito.
 
 ```
