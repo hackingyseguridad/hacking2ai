@@ -6,6 +6,21 @@
 
 # Hacking a la IA y entre ellas: IA contra IA
 
+### Resumen ejecutivo:
+
+Nueva superficie de ataque: a las vulnerabilidades de siempre se suman modelos, prompts, APIs, datos, agentes y conectores, y el modelo no distingue bien instrucciones de datos.
+1. Modelos e infraestructura: robo o extracción del modelo, APIs expuestas, dependencias comprometidas y consumo abusivo de recursos.
+2. Prompt injection: instrucciones ocultas en documentos, webs, correos o imágenes que alteran la respuesta de la IA.
+3. Jailbreaks: romper las restricciones del modelo mediante cambios de rol, escenarios ficticios, pretextos o peticiones encadenadas.
+4. Fuga de información: forzar al modelo a revelar secretos, su prompt de sistema, documentos o datos de otros usuarios.
+5. Envenenamiento del conocimiento: manipular los datos de entrenamiento o las fuentes RAG para que responda con información falsa.
+6. Hacking de agentes: pasar de manipular respuestas a provocar acciones reales abusando de sus permisos y herramientas.
+7. IA contra IA: un modelo atacante genera, prueba y adapta ataques contra otro, con un juez que evalúa el resultado.
+8. Demos: prompt injection, jailbreak y robo de información sobre modelos en local con Ollama.
+9. Defensas: mínimo privilegio, control de accesos y fuentes, filtros independientes, aprobación humana, monitorización y pruebas continuas.
+10. Conclusión: ningún filtro basta; hace falta defensa en profundidad en toda la aplicación, y más cuanta más autonomía tenga la IA.
+11 .Marco y legal: OWASP LLM 2025, MITRE ATLAS, NIST AI RMF y Reglamento de IA de la UE; solo pruebas propias o autorizadas.
+
 ## Indice
 
 La IA como nueva superficie de ataque: modelos, aplicaciones, datos, agentes, herramientas e integraciones.
@@ -35,6 +50,7 @@ Demo de ataques: jailbreak, robo de informacion y prompt injection;  **Ollama** 
 | 5. Envenenamiento | LLM04 Data and Model Poisoning · LLM08 Vector and Embedding Weaknesses |
 | 6. Agentes | LLM06 Excessive Agency |
 
+
 ---
 
 ## Nueva superficie de ataque
@@ -58,6 +74,9 @@ La inteligencia artificial no elimina las vulnerabilidades tradicionales, aparec
 > el modelo no distingue de forma fiable entre *instrucciones* y *datos*. Todo es texto en el mismo contexto.
 
 ---
+
+
+
 
 ## 1. Ataques a modelos e infraestructura
 
@@ -323,7 +342,7 @@ este ataque consiste en manipular lo que el agente hace, mediente intrucciones P
                                          Acción real en el sistema
 ```
 
-### Medidas:
+### Contramedidas:
 
 | Medida | Descripción |
 |---|---|
@@ -354,6 +373,9 @@ La automatización del ataque: un modelo **genera, prueba y adapta** ataques con
 ```
 
 ---
+
+<img align="left" alt="hackingyseguridad.com" src="https://raw.githubusercontent.com/hackingyseguridad/hacking2ai/main/resumen.png" style="margin-bottom: 20px;">
+
 
 ## Conclusiones:
 
