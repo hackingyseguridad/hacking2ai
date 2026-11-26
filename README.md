@@ -219,7 +219,7 @@ Genera esos ejemplos.
 
 ## 4. Robo y exposición de información
 
-Intentariamos con instrucciones/PROMPTs **saltar las barreras**/guardarrailes del modelo para obtener información sensible: *Sensitive Information Disclosure*: la IA como **canal de fuga**. Expone lo que sabe, lo que ve y lo que recuerda. Un asistente puede revelar datos presentes en su contexto, recuperados desde herramientas o incluidos indebidamente en registros. También existen riesgos relacionados con información memorizada durante el entrenamiento, pero no toda fuga tiene ese origen.
+Ataque con el que intentariamos con instrucciones/PROMPTs **saltar las barreras** los guardarraíles del modelo para obtener información sensible: **Sensitive Information Disclosure**: esa información puede venir de su contexto, de alguna herramienta a la que tenga acceso o del propio entrenamiento.
 
 | Fuga | Mecanismo | Ejemplo | Mitigación |
 |------|-----------|---------|-----------|
