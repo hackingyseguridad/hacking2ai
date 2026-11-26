@@ -134,11 +134,11 @@ La instrucción se puede esconder en:
 ```
 
 ```bash
-(echo "Analiza y resume el siguiente informe de seguridad:"; cat factura.txt) | ollama run deepseek-r1:1.5b
+(echo "Analiza y resume la siguiente factura:"; cat factura.txt) | ollama run deepseek-r1:1.5b
 ```
 
 ```bash
-(echo "Analiza y resume el siguiente informe de seguridad:"; cat factura2.txt) | ollama run deepseek-r1:1.5b
+(echo "Analiza y resume la siguiente factura:"; cat factura2.txt) | ollama run deepseek-r1:1.5b
 ```
 
 ### Defensas
