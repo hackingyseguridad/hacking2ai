@@ -126,7 +126,7 @@ La instrucción se puede esconder en:
 > vamos a camuflar instrucciones encubiertas en un fichero para que la IA procese y provocar que devuelva un resultado muy distinto
 
 ```bash
-(echo "Analiza y resume el siguiente informe de seguridad:"; cat prompt.txt) | ollama run deepseek-r1:1.5b
+(echo "Analiza y resume el siguiente informe de seguridad:"; cat prompt.txt) | ollama run deepseek-r1:1.5b --hidethinking
 ```
 
 ```bash
@@ -134,11 +134,11 @@ La instrucción se puede esconder en:
 ```
 
 ```bash
-(echo "Analiza y resume la siguiente factura:"; cat factura.txt) | ollama run deepseek-r1:1.5b
+(echo "Analiza y resume la siguiente factura:"; cat factura.txt) | ollama run deepseek-r1:1.5b --hidethinking
 ```
 
 ```bash
-(echo "Analiza y resume la siguiente factura:"; cat factura2.txt) | ollama run deepseek-r1:1.5b
+(echo "Analiza y resume la siguiente factura:"; cat factura2.txt) | ollama run deepseek-r1:1.5b --hidethinking
 ```
 
 ### Defensas
