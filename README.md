@@ -261,7 +261,7 @@ ollama show telco2-demo --modelfile
 ```
 
 
-### Medidas
+### Contramedidas
 
 | Medida | Descripción |
 |--------|-------------|
@@ -290,7 +290,7 @@ Ataque que consiste en manipular/ intoxicar o envenenar, las fuentes de conocimi
                                        └──► Recupera el documento falso ──► Respuesta incorrecta
 ```
 
-### Medidas
+### Contramedidas
 
 | Medida | Descripción |
 |--------|-------------|
