@@ -177,7 +177,7 @@ ollama create telco-demo -f Modelfile
 ```
 
 ```bash
-ollama run telco-demo 
+ollama run telco-demo  --hidethinking
 ```
 
 Petición directa:
