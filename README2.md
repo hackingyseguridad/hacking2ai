@@ -177,7 +177,7 @@ ollama create telco-demo -f Modelfile
 ```
 
 ```bash
-ollama run telco-demo
+ollama run telco-demo 
 ```
 
 Petición directa:
@@ -242,10 +242,10 @@ ollama create telco2-demo -f Modelfile2
 ```
 
 ```bash
-ollama run telco2-demo
+ollama run telco2-demo 
 ```
 ```bash
-ollama show telco2-demo --Modelfile2
+ollama show telco2-demo --modelfile
 ```
 
 ```text
@@ -417,9 +417,3 @@ Fuentes primarias. Se enlazan expresamente las fichas OWASP **2025** utilizadas 
 - **[R14]** Carlini et al.: [Poisoning Web-Scale Training Datasets is Practical](https://arxiv.org/abs/2302.10149), 2023.
 - **[R15]** Zou et al.: [PoisonedRAG: Knowledge Corruption Attacks to Retrieval-Augmented Generation of Large Language Models](https://arxiv.org/abs/2402.07867), 2024.
 - **[R16]** Mehrotra et al.: [Tree of Attacks: Jailbreaking Black-Box LLMs Automatically](https://arxiv.org/abs/2312.02119), 2023.
-
----
-
-#
-[www.hackingyseguridad.com](https://www.hackingyseguridad.com/)
-#
