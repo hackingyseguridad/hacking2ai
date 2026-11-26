@@ -22,7 +22,7 @@ Seis ataques: prompt injection, jailbreak, robo de información, envenenamiento 
 | 6 | Hacking de agentes | De manipular respuestas a provocar acciones; abuso de permisos, ejecución de herramientas y acceso a sistemas. |
 | 7 | IA contra IA | Un modelo genera, prueba y adapta ataques contra otro. |
 
-Demo de ataques de jailbreak, robo de informacion y prompt injection: utilizaremos **Ollama** con **DeepSeek**.
+Demo de ataques de jailbreak, robo de informacion y prompt injection: utilizaremos **Ollama** con **qwen2.5:1.5b**, IA en local.
 
 ### Correspondencia con OWASP Top 10 para LLM (edición 2025)
 
@@ -126,19 +126,19 @@ La instrucción se puede esconder en:
 > vamos a camuflar instrucciones encubiertas en un fichero para que la IA procese y provocar que devuelva un resultado muy distinto
 
 ```bash
-(echo "Analiza y resume el siguiente informe de seguridad:"; cat prompt.txt) | ollama run deepseek-r1:1.5b --hidethinking
+(echo "Analiza y resume el siguiente informe de seguridad:"; cat prompt.txt) | ollama run qwen2.5:1.5b --hidethinking
 ```
 
 ```bash
-(echo "Analiza y resume el siguiente informe de seguridad:"; cat prompt2.txt) | ollama run deepseek-r1:1.5b --hidethinking
+(echo "Analiza y resume el siguiente informe de seguridad:"; cat prompt2.txt) | ollama run qwen2.5:1.5b --hidethinking
 ```
 
 ```bash
-(echo "Analiza y resume la siguiente factura:"; cat factura.txt) | ollama run deepseek-r1:1.5b --hidethinking
+(echo "Analiza y resume la siguiente factura:"; cat factura.txt) | ollama run qwen2.5:1.5b --hidethinking
 ```
 
 ```bash
-(echo "Analiza y resume la siguiente factura:"; cat factura2.txt) | ollama run deepseek-r1:1.5b --hidethinking
+(echo "Analiza y resume la siguiente factura:"; cat factura2.txt) | ollama run qwen2.5:1.5b --hidethinking
 ```
 
 ### Defensas
@@ -422,5 +422,3 @@ Fuentes primarias. Se enlazan expresamente las fichas OWASP **2025** utilizadas 
 #
 [www.hackingyseguridad.com](https://www.hackingyseguridad.com/)
 #
-#
-
