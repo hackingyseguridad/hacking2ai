@@ -275,9 +275,9 @@ ollama show telco2-demo --modelfile
 
 ## 5. Envenenamiento del conocimiento (RAG)
 
-**RAG** (*Retrieval-Augmented Generation*, Generación Aumentada por Recuperación) permite que los modelos de lenguaje respondan preguntas basándose en "materiales de referencia" externos, en lugar de depender únicamente de la memoria de su entrenamiento.
+Ataque que consiste en manipular/ intoxicar o envenenar, las fuentes de conomiento, para que el modelo de una respuesta falta; Por  ej. en documnentos: PDF, DOC, TXT, paginas web, WIKI corp, BBDD, respositorios; 
 
-Si el atacante controla **lo que la IA consulta**, controla **lo que la IA responde**, sin tocar el modelo. Conviene distinguir la alteración del entrenamiento, que puede afectar a los parámetros aprendidos, de la manipulación de un corpus RAG, que modifica las fuentes consultadas. Ambas pueden sesgar resultados, pero tienen persistencia y mecanismos diferentes.
+**RAG** (*Retrieval-Augmented Generation*, Generación Aumentada por Recuperación) permite que los modelos de lenguaje respondan preguntas basándose en "materiales de referencia" externos, en lugar de depender únicamente de la memoria de su entrenamiento;  sin tocar el modelo. RAG es modificar las fuentes consultadas. 
 
 | Punto de entrada | Cómo se envenena | Efecto |
 |------------------|------------------|--------|
