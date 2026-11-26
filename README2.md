@@ -22,7 +22,7 @@ Seis ataques: prompt injection, jailbreak, robo de información, envenenamiento 
 | 6 | Hacking de agentes | De manipular respuestas a provocar acciones; abuso de permisos, ejecución de herramientas y acceso a sistemas. |
 | 7 | IA contra IA | Un modelo genera, prueba y adapta ataques contra otro. |
 
-Demo de ataques de jailbreak, robo de informacion y prompt injection: utilizaremos **Ollama** con **qwen2.5:1.5b**, IA en local.
+Demo de ataques: jailbreak, robo de informacion y prompt injection;  **Ollama** con **qwen2.5:1.5b**, IA en local.
 
 ### Correspondencia con OWASP Top 10 para LLM (edición 2025)
 
@@ -121,7 +121,7 @@ La instrucción se puede esconder en:
 | Imágenes | Texto incrustado legible por visión del modelo |
 | Resultados de herramientas | Respuestas de APIs de terceros |
 
-### Demostración
+### Demostración:
 
 > vamos a camuflar instrucciones encubiertas en un fichero para que la IA procese y provocar que devuelva un resultado muy distinto
 
@@ -141,7 +141,7 @@ La instrucción se puede esconder en:
 (echo "Analiza y resume la siguiente factura:"; cat factura2.txt) | ollama run qwen2.5:1.5b --hidethinking
 ```
 
-### Defensas
+### Defensas:
 
 | Defensa | Descripción | Limitación |
 |---|---|---|
@@ -158,7 +158,7 @@ La instrucción se puede esconder en:
 
 Consisten en romper las restricciones de comportamiento de un modelo. Pueden recurrir a suplantación de roles, escenarios ficticios, reformulación o una conversación progresiva. No todo juego de rol es un ataque: la diferencia está en el intento de vulnerar una regla aplicable. Conviene conocer las **categorías** para poder evaluar y bastionar, sin necesidad de publicar cadenas listas para usar.
 
-### Demostración
+### Demostración:
 
 Vamos a crear un modelo de IA a partir de DeepSeek, pero este nuevo con restricciones (fichero `Modelfile`):
 
@@ -206,7 +206,7 @@ y ciberseguridad para validar el detector.
 Genera esos ejemplos.
 ```
 
-### Defensas
+### Defensas:
 
 | Defensa | Descripción |
 |---|---|
@@ -261,7 +261,7 @@ ollama show telco2-demo --modelfile
 ```
 
 
-### Medidas
+### Contramedidas:
 
 | Medida | Descripción |
 |--------|-------------|
@@ -290,7 +290,7 @@ Ataque que consiste en manipular/ intoxicar o envenenar, las fuentes de conocimi
                                        └──► Recupera el documento falso ──► Respuesta incorrecta
 ```
 
-### Medidas
+### Contramedidas:
 
 | Medida | Descripción |
 |--------|-------------|
@@ -323,7 +323,7 @@ este ataque consiste en manipular lo que el agente hace, mediente intrucciones P
                                          Acción real en el sistema
 ```
 
-### Medidas
+### Medidas:
 
 | Medida | Descripción |
 |---|---|
@@ -355,7 +355,7 @@ La automatización del ataque: un modelo **genera, prueba y adapta** ataques con
 
 ---
 
-## Conclusiones
+## Conclusiones:
 
 | # | Conclusión |
 |---|-----------|
@@ -370,7 +370,7 @@ La automatización del ataque: un modelo **genera, prueba y adapta** ataques con
 
 ---
 
-## Marcos de referencia
+## Marcos de referencia:
 
 | Marco | Enfoque | Enlace |
 |-------|---------|--------|
@@ -381,7 +381,7 @@ La automatización del ataque: un modelo **genera, prueba y adapta** ataques con
 
 ---
 
-## Aviso legal
+## Aviso legal:
 
 Este repositorio es **exclusivamente para uso educativo y para pruebas de auditoría autorizadas, controladas y en entornos de pruebas**.
 
@@ -396,7 +396,7 @@ El autor no se hace responsable del uso indebido. Prueba solo en sistemas **prop
 
 ---
 
-## Referencias
+## Referencias:
 
 Fuentes primarias. Se enlazan expresamente las fichas OWASP **2025** utilizadas como referencia; la numeración no se presenta como una edición 2026. Los casos y prompts del laboratorio son ejemplos originales de este material, no reproducciones de incidentes ni validaciones de productos concretos.
 
