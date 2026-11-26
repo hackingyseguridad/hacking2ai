@@ -390,6 +390,18 @@ La automatización del ataque: un modelo **genera, prueba y adapta** ataques con
 | 7 | La seguridad requiere controles en toda la aplicación, además del comportamiento del modelo. |
 | 8 | Mide: define casos de prueba reproducibles y repítelos tras cada cambio de modelo, prompt o conector. |
 
+Protección de la arquitectura de IA:
+
+1. Protección de las APIs: autenticación, autorización y limitación del número de peticiones (Rate Limiting).
+
+2. Control de las fuentes de información: utilizar fuentes fiables y separar los datos de las instrucciones para prevenir ataques de Prompt Injection.
+
+3. Protección de la información sensible: no introducir credenciales, secretos ni información confidencial innecesaria en el contexto de los modelos de IA.
+
+4. Seguridad de los agentes de IA: aplicar el principio de mínimo privilegio y exigir una autorización independiente antes de ejecutar acciones críticas.
+
+5. AI Red Team: realizar pruebas periódicas de seguridad sobre los modelos, aplicaciones y agentes de IA para identificar vulnerabilidades y comportamientos no deseados.
+
 ---
 
 ## Marcos de referencia:
