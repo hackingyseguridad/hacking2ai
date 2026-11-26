@@ -75,7 +75,7 @@ La inteligencia artificial no elimina las vulnerabilidades tradicionales, aparec
 
 ---
 
-<img align="left" alt="hackingyseguridad.com" src="https://raw.githubusercontent.com/hackingyseguridad/hacking2ai/main/resumen.png" style="margin-bottom: 20px;">
+
 
 
 ## 1. Ataques a modelos e infraestructura
@@ -342,7 +342,7 @@ este ataque consiste en manipular lo que el agente hace, mediente intrucciones P
                                          Acción real en el sistema
 ```
 
-### Medidas:
+### Contramedidas:
 
 | Medida | Descripción |
 |---|---|
@@ -373,6 +373,9 @@ La automatización del ataque: un modelo **genera, prueba y adapta** ataques con
 ```
 
 ---
+
+<img align="left" alt="hackingyseguridad.com" src="https://raw.githubusercontent.com/hackingyseguridad/hacking2ai/main/resumen.png" style="margin-bottom: 20px;">
+
 
 ## Conclusiones:
 
