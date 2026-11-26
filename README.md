@@ -75,6 +75,9 @@ La inteligencia artificial no elimina las vulnerabilidades tradicionales, aparec
 
 ---
 
+<img align="left" alt="hackingyseguridad.com" src="https://raw.githubusercontent.com/hackingyseguridad/hacking2ai/main/resumen.png" style="margin-bottom: 20px;">
+
+
 ## 1. Ataques a modelos e infraestructura
 
 Extracción de modelos, APIs expuestas, dependencias comprometidas y consumo abusivo de recursos.
