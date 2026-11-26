@@ -322,7 +322,7 @@ Ataque que consiste en manipular/ intoxicar o envenenar, las fuentes de conocimi
 
 ## 6. Hacking de agentes
 
-este ataque consiste en manipular lo que el agente hace, mediente intrucciones PROMPT injection de forma directa o indirecta, aprovenchando que un ajente tiene acceso a aplicacione y permisos amplios podemos hacer que haga cosas distintas a las incialmente previstas
+este ataque consiste en abuso y "encadenado de acciones" del agente, de los permisos que tiene y del acceso que tiene a distintas aplicaciones, sistemas, web /api, BBDD, etc.. ; lo que el agente hace mediente intrucciones PROMPT de forma directa o indirecta, pedirle que haga cosas distintas a las incialmente previstas
 
 | Riesgo | Descripción | Ejemplo |
 |--------|-------------|---------|
@@ -389,6 +389,18 @@ La automatización del ataque: un modelo **genera, prueba y adapta** ataques con
 | 6 | Automatiza la auditoría: **IA contra IA** también sirve para defender, aunque necesita límites y evaluación fiable. |
 | 7 | La seguridad requiere controles en toda la aplicación, además del comportamiento del modelo. |
 | 8 | Mide: define casos de prueba reproducibles y repítelos tras cada cambio de modelo, prompt o conector. |
+
+Protección de la arquitectura de IA:
+
+1. Protección de las APIs: autenticación, autorización y limitación del número de peticiones (Rate Limiting).
+
+2. Control de las fuentes de información: utilizar fuentes fiables y separar los datos de las instrucciones para prevenir ataques de Prompt Injection.
+
+3. Protección de la información sensible: no introducir credenciales, secretos ni información confidencial innecesaria en el contexto de los modelos de IA.
+
+4. Seguridad de los agentes de IA: aplicar el principio de mínimo privilegio y exigir una autorización independiente antes de ejecutar acciones críticas.
+
+5. AI Red Team: realizar pruebas periódicas de seguridad sobre los modelos, aplicaciones y agentes de IA para identificar vulnerabilidades y comportamientos no deseados.
 
 ---
 
