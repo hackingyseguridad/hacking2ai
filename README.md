@@ -303,7 +303,7 @@ Ataque que consiste en manipular/ intoxicar o envenenar, las fuentes de conocimi
 
 ## 6. Hacking de agentes
 
-Un agente no solo responde: **actúa**. Pasamos de "manipular una respuesta" a "provocar una acción". Un agente puede convertir una respuesta en una propuesta de operación. El riesgo aumenta cuando dispone de funciones innecesarias, permisos amplios o autonomía sin límites.
+este ataque consiste en manipular lo que el agente hace, mediente intrucciones PROMPT injection de forma directa o indirecta, aprovenchando que un ajente tiene acceso a aplicacione y permisos amplios podemos hacer que haga cosas distintas a las incialmente previstas
 
 | Riesgo | Descripción | Ejemplo |
 |--------|-------------|---------|
