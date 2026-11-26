@@ -231,6 +231,8 @@ Genera esos ejemplos.
 
 ### Demostración:
 
+> vamos a extraer datos sensibles, en un modelo de IA, que tiene expresamente prohibido facilitar datos como: claves, usuarios, tockens, datos personales, ..
+
 Creamos un `Modelfile2`:
 
 ```bash
