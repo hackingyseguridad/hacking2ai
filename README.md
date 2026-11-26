@@ -177,7 +177,7 @@ ollama create telco-demo -f Modelfile
 ```
 
 ```bash
-ollama run telco-demo --think=false
+ollama run telco-demo 
 ```
 
 Petición directa:
@@ -242,7 +242,7 @@ ollama create telco2-demo -f Modelfile2
 ```
 
 ```bash
-ollama run telco2-demo --think=false
+ollama run telco2-demo 
 ```
 ```bash
 ollama show telco2-demo --modelfile
