@@ -245,7 +245,7 @@ ollama create telco2-demo -f Modelfile2
 ollama run telco2-demo
 ```
 ```bash
-ollama show telco2-demo --Modelfile2
+ollama show telco2-demo --modelfile
 ```
 
 ```text
