@@ -231,6 +231,8 @@ Genera esos ejemplos.
 
 ### Demostración:
 
+Vamos a crear un modelo de IA a partir de DeepSeek, pero este nuevo con restricciones de no facilitar datos sensibles (fichero Modelfile2):
+
 > vamos a extraer datos sensibles, en un modelo de IA, que tiene expresamente prohibido facilitar datos como: claves, usuarios, tockens, datos personales, ..
 
 Creamos un `Modelfile2`:
