@@ -59,7 +59,7 @@ chmod 777 * 2>/dev/null
 
 
 # ------------------------------------------------------------------------
-# 3) OLLAMA
+# INSTALA OLLAMA
 # ------------------------------------------------------------------------
 
 echo " "
@@ -79,7 +79,5 @@ if command -v systemctl >/dev/null 2>&1; then
         sudo systemctl start ollama
     fi
 fi
-
-
 
 chmod 777 *
