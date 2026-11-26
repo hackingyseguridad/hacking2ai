@@ -16,10 +16,10 @@ Nueva superficie de ataque: a las vulnerabilidades de siempre se suman modelos, 
 5. Envenenamiento del conocimiento: manipular los datos de entrenamiento o las fuentes RAG para que responda con información falsa.
 6. Hacking de agentes: pasar de manipular respuestas a provocar acciones reales abusando de sus permisos y herramientas.
 7. IA contra IA: un modelo atacante genera, prueba y adapta ataques contra otro, con un juez que evalúa el resultado.
-Demos: prompt injection, jailbreak y robo de información sobre modelos en local con Ollama.
-Defensas: mínimo privilegio, control de accesos y fuentes, filtros independientes, aprobación humana, monitorización y pruebas continuas.
-Conclusión: ningún filtro basta; hace falta defensa en profundidad en toda la aplicación, y más cuanta más autonomía tenga la IA.
-Marco y legal: OWASP LLM 2025, MITRE ATLAS, NIST AI RMF y Reglamento de IA de la UE; solo pruebas propias o autorizadas.
+8. Demos: prompt injection, jailbreak y robo de información sobre modelos en local con Ollama.
+9. Defensas: mínimo privilegio, control de accesos y fuentes, filtros independientes, aprobación humana, monitorización y pruebas continuas.
+10. Conclusión: ningún filtro basta; hace falta defensa en profundidad en toda la aplicación, y más cuanta más autonomía tenga la IA.
+11 .Marco y legal: OWASP LLM 2025, MITRE ATLAS, NIST AI RMF y Reglamento de IA de la UE; solo pruebas propias o autorizadas.
 
 ## Indice
 
