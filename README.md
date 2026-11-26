@@ -123,6 +123,8 @@ La instrucción se puede esconder en:
 
 ### Demostración
 
+> vamos a camuflar instrucciones encubiertas en un fichero para que la IA procese y provocar que devuelva un resultado muy distinto
+
 ```bash
 (echo "Analiza y resume el siguiente informe de seguridad:"; cat prompt.txt) | ollama run deepseek-r1:1.5b
 ```
