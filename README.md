@@ -21,7 +21,7 @@ Nueva superficie de ataque: a las vulnerabilidades de siempre se suman modelos, 
 10. Conclusión: ningún filtro basta; hace falta defensa en profundidad en toda la aplicación, y más cuanta más autonomía tenga la IA.
 11 .Marco y legal: OWASP LLM 2025, MITRE ATLAS, NIST AI RMF y Reglamento de IA de la UE; solo pruebas propias o autorizadas.
 
-## Indice
+## Indice:
 
 La IA como nueva superficie de ataque: modelos, aplicaciones, datos, agentes, herramientas e integraciones.
 
@@ -53,7 +53,7 @@ Demo de ataques: jailbreak, robo de informacion y prompt injection;  **Ollama** 
 
 ---
 
-## Nueva superficie de ataque
+### Nueva superficie de ataque:
 
 La incorporación de la inteligencia artificial a las infraestructuras corporativas introduce nuevas superficies y vectores de ataque, además de las vulnerabilidades tradicionales.
 
@@ -82,6 +82,8 @@ La inteligencia artificial no elimina las vulnerabilidades tradicionales, aparec
 
 Extracción de modelos, APIs expuestas, dependencias comprometidas y consumo abusivo de recursos.
 
+<img align="left" alt="Infra" src="https://raw.githubusercontent.com/hackingyseguridad/hacking2ai/main/infra.png" style="margin-bottom: 20px;">
+
 Un modelo concentra conocimiento y capacidades que cuestan mucho entrenar. El atacante quiere apropiarse de ellos sin asumir ese coste.
 
 Fundamentalmente, existen tres posibilidades:
@@ -95,7 +97,7 @@ Fundamentalmente, existen tres posibilidades:
 - **Extracción de información de entrenamiento.**
   Consiste en intentar conseguir que el modelo reproduzca información que haya memorizado durante su entrenamiento, como datos personales, información confidencial o documentación privada.
 
-**Infraestructura:** APIs expuestas sin autenticación, claves filtradas, paneles sin control de acceso y pesos con permisos amplios. Mitigación: localhost, proxy con autenticación y TLS, firewall, gestor de secretos, MFA y mínimo privilegio.
+- **Infraestructura:** APIs expuestas sin autenticación, claves filtradas, paneles sin control de acceso y pesos con permisos amplios. Mitigación: localhost, proxy con autenticación y TLS, firewall, gestor de secretos, MFA y mínimo privilegio.
 
 <img align="left" alt="MCP" src="https://raw.githubusercontent.com/hackingyseguridad/hacking2ai/main/mcp.png" style="margin-bottom: 20px;">
 
@@ -458,3 +460,4 @@ Fuentes primarias. Se enlazan expresamente las fichas OWASP **2025** utilizadas 
 #
 [www.hackingyseguridad.com](https://www.hackingyseguridad.com/)
 #
+
