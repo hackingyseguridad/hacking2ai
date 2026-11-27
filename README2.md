@@ -97,6 +97,8 @@ Fundamentalmente, existen tres posibilidades:
 
 **Infraestructura:** APIs expuestas sin autenticación, claves filtradas, paneles sin control de acceso y pesos con permisos amplios. Mitigación: localhost, proxy con autenticación y TLS, firewall, gestor de secretos, MFA y mínimo privilegio.
 
+<img align="left" alt="MCP" src="https://raw.githubusercontent.com/hackingyseguridad/hacking2ai/main/mcp.png" style="margin-bottom: 20px;">
+
 **Cadena de suministro:** modelos sin verificar hash ni firma, formatos que ejecutan código (pickle; preferir safetensors), dependencias y datasets no confiables. Medidas: inventario (AI-BOM), verificación de firmas y repositorios internos.
 
 **Consumo de recursos:** APIs "sin límites" permiten DoS, *denial of wallet* y extracción masiva. Medidas: autenticación, cuotas, rate limiting y límites de coste.
@@ -294,7 +296,7 @@ ollama show telco2-demo --modelfile
 
 ## 5. Envenenamiento del conocimiento (RAG poisoning)
 
-Ataque que consiste en manipular/ intoxicar o envenenar, las fuentes de conocimiento, para que el modelo de una respuesta falta; Por  ej. en documnentos: PDF, DOC, TXT, paginas web, WIKI corporativos, BBDD, repositorios;  **RAG** permite que los modelos de lenguaje consulten información externa y es esas fuentes externas donde manipulamos la información. 
+Ataque que consiste en manipular/ intoxicar o envenenar, las fuentes "externas" de conocimiento, para que el modelo de una respuesta falta; Por  ej. en documnentos: PDF, DOC, TXT, paginas web, WIKI corporativos, BBDD, repositorios;  **RAG** permite que los modelos de lenguaje consulten información externa y es esas fuentes externas donde manipulamos la información. 
 
 | Punto de entrada | Cómo se envenena | Efecto |
 |------------------|------------------|--------|
@@ -456,3 +458,4 @@ Fuentes primarias. Se enlazan expresamente las fichas OWASP **2025** utilizadas 
 #
 [www.hackingyseguridad.com](https://www.hackingyseguridad.com/)
 #
+
