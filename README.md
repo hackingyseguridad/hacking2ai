@@ -294,7 +294,7 @@ ollama show telco2-demo --modelfile
 
 ## 5. Envenenamiento del conocimiento (RAG poisoning)
 
-Ataque que consiste en manipular/ intoxicar o envenenar, las fuentes de conocimiento, para que el modelo de una respuesta falta; Por  ej. en documnentos: PDF, DOC, TXT, paginas web, WIKI corporativos, BBDD, repositorios;  **RAG** permite que los modelos de lenguaje consulten información externa y es esas fuentes externas donde manipulamos la información. 
+Ataque que consiste en manipular/ intoxicar o envenenar, las fuentes "externas" de conocimiento, para que el modelo de una respuesta falta; Por  ej. en documnentos: PDF, DOC, TXT, paginas web, WIKI corporativos, BBDD, repositorios;  **RAG** permite que los modelos de lenguaje consulten información externa y es esas fuentes externas donde manipulamos la información. 
 
 | Punto de entrada | Cómo se envenena | Efecto |
 |------------------|------------------|--------|
